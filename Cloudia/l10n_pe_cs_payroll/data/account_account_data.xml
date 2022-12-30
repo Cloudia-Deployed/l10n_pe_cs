@@ -16,10 +16,10 @@
       <field name="code">4171000</field>
       <field name="user_type_id">Payable</field>
       <field name="reconcile">TRUE</field>
-      <field name="currency_id">base.PEN</field>
-      <field name="allowed_journal_ids" eval="hr_payroll_account_journal"/>
+      <field name="currency_id">base.pe</field>
+      <field name="allowed_journal_ids" ref="hr_payroll_account_journal"/>
       <field name="deprecated" eval="False"/>
-      <field name="user_type_id" eval="Account.Data_Account_Type_Payable"/>
+      <field name="user_type_id" ref="Account.Data_Account_Type_Payable"/>
     </record>
 
     <record  id="chart4172" model="account.account">
@@ -27,10 +27,10 @@
       <field name="code">4172000</field>
       <field name="user_type_id">Payable</field>
       <field name="reconcile">TRUE</field>
-      <field name="currency_id">base.PEN</field>
-      <field name="allowed_journal_ids" eval="hr_payroll_account_journal"/>
+      <field name="currency_id">base.pe</field>
+      <field name="allowed_journal_ids" ref="hr_payroll_account_journal"/>
       <field name="deprecated" eval="False"/>
-      <field name="user_type_id" eval="Account.Data_Account_Type_Payable"/>
+      <field name="user_type_id" ref="Account.Data_Account_Type_Payable"/>
     </record>
 
     <record  id="chart4173" model="account.account">
@@ -38,10 +38,10 @@
       <field name="code">4173000</field>
       <field name="user_type_id">Payable</field>
       <field name="reconcile">TRUE</field>
-      <field name="currency_id">base.PEN</field>
-      <field name="allowed_journal_ids" eval="hr_payroll_account_journal"/>
+      <field name="currency_id">base.pe</field>
+      <field name="allowed_journal_ids" ref="hr_payroll_account_journal"/>
       <field name="deprecated" eval="False"/>
-      <field name="user_type_id" eval="Account.Data_Account_Type_Payable"/>
+      <field name="user_type_id" ref="Account.Data_Account_Type_Payable"/>
     </record>
 
     <record  id="chart4174" model="account.account">
@@ -49,10 +49,10 @@
       <field name="code">4174000</field>
       <field name="user_type_id">Payable</field>
       <field name="reconcile">TRUE</field>
-      <field name="currency_id">base.PEN</field>
-      <field name="allowed_journal_ids" eval="hr_payroll_account_journal"/>
+      <field name="currency_id">base.pe</field>
+      <field name="allowed_journal_ids" ref="hr_payroll_account_journal"/>
       <field name="deprecated" eval="False"/>
-      <field name="user_type_id" eval="Account.Data_Account_Type_Payable"/>
+      <field name="user_type_id" ref="Account.Data_Account_Type_Payable"/>
     </record>
 
   </data>
