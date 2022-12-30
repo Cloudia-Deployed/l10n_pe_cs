@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo - Module Developed by Cloudia Systems S.A.C. | http://cloudia.systems | <info@cloudia.systems> -->
+<!-- Copyright (c) 2021-Present Cloudia Systems S.A.C. -->
+<!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
+
+<odoo>
+    <data>
+        <record id="hr_input_bonus" model="hr.payslip.input.type">
+            <field name="code">BONUS</field>
+            <field name="name">Bonus</field>
+            <field name="country_id" eval="False"/>
+        </record>
+        <record id="hr_input_unemployment_insurance" model="hr.payslip.input.type">
+            <field name="code">UNEMPLOYMENT_INSURANCE</field>
+            <field name="name">Unemployment Insurance</field>
+            <field name="country_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

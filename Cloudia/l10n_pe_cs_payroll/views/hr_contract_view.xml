@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo - Module Developed by Cloudia Systems S.A.C. | http://cloudia.systems | <info@cloudia.systems> -->
+<!-- Copyright (c) 2021-Present Cloudia Systems S.A.C. -->
+<!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
+
+<odoo>
+    <record id="hr_contract_view_form_inherited" model="ir.ui.view">
+        <field name="name">hr.contract.view.form.inherited</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='wage']" position="after">
+                <label for="advance_wage_percentage"/>
+                <div class="o_row" name="advance_wage">
+                    <field name="advance_wage_percentage" nolabel="1"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

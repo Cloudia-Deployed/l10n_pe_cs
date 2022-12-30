@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo - Module Developed by Cloudia Systems S.A.C. | http://cloudia.systems | <info@cloudia.systems> -->
+<!-- Copyright (c) 2021-Present Cloudia Systems S.A.C. -->
+<!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
+
+<odoo>
+
+  <data>
+
+    <record  id="chart417" model="account.account">
+      <field name="deprecated" eval="True"/>
+    </record>
+
+    <record  id="chart4171" model="account.account">
+      <field name="name">AFP Integra</field>
+      <field name="code">4171000</field>
+      <field name="user_type_id">Payable</field>
+      <field name="reconcile">TRUE</field>
+      <field name="currency_id">base.pe</field>
+      <field name="allowed_journal_ids" eval="hr_payroll_account_journal"/>
+      <field name="deprecated" eval="False"/>
+      <field name="user_type_id" eval="Account.Data_Account_Type_Payable"/>
+    </record>
+
+    <record  id="chart4172" model="account.account">
+      <field name="name">AFP Prima</field>
+      <field name="code">4172000</field>
+      <field name="user_type_id">Payable</field>
+      <field name="reconcile">TRUE</field>
+      <field name="currency_id">base.pe</field>
+      <field name="allowed_journal_ids" eval="hr_payroll_account_journal"/>
+      <field name="deprecated" eval="False"/>
+      <field name="user_type_id" eval="Account.Data_Account_Type_Payable"/>
+    </record>
+
+    <record  id="chart4173" model="account.account">
+      <field name="name">AFP Profuturo</field>
+      <field name="code">4173000</field>
+      <field name="user_type_id">Payable</field>
+      <field name="reconcile">TRUE</field>
+      <field name="currency_id">base.pe</field>
+      <field name="allowed_journal_ids" eval="hr_payroll_account_journal"/>
+      <field name="deprecated" eval="False"/>
+      <field name="user_type_id" eval="Account.Data_Account_Type_Payable"/>
+    </record>
+
+    <record  id="chart4174" model="account.account">
+      <field name="name">AFP Habitat</field>
+      <field name="code">4174000</field>
+      <field name="user_type_id">Payable</field>
+      <field name="reconcile">TRUE</field>
+      <field name="currency_id">base.pe</field>
+      <field name="allowed_journal_ids" eval="hr_payroll_account_journal"/>
+      <field name="deprecated" eval="False"/>
+      <field name="user_type_id" eval="Account.Data_Account_Type_Payable"/>
+    </record>
+
+  </data>
+
+</odoo>
