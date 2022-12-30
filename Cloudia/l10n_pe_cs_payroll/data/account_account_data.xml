@@ -7,11 +7,11 @@
 
   <data>
 
-    <record  id="chart417" model="account.account">
+    <record  id="l10n_pe.chart417" model="account.account.template">
       <field name="deprecated" eval="True"/>
     </record>
 
-    <record  id="chart4171" model="account.account">
+    <record  id="chart4171" model="account.account.template">
       <field name="name">AFP Integra</field>
       <field name="code">4171000</field>
       <field name="user_type_id" ref="liability_payable"/>
@@ -22,7 +22,7 @@
       <field name="user_type_id" ref="Account.Data_Account_Type_Payable"/>
     </record>
 
-    <record  id="chart4172" model="account.account">
+    <record  id="chart4172" model="account.account.template">
       <field name="name">AFP Prima</field>
       <field name="code">4172000</field>
       <field name="user_type_id" ref="liability_payable"/>
@@ -33,7 +33,7 @@
       <field name="user_type_id" ref="Account.Data_Account_Type_Payable"/>
     </record>
 
-    <record  id="chart4173" model="account.account">
+    <record  id="chart4173" model="account.account.template">
       <field name="name">AFP Profuturo</field>
       <field name="code">4173000</field>
       <field name="user_type_id" ref="liability_payable"/>
@@ -44,7 +44,7 @@
       <field name="user_type_id" ref="Account.Data_Account_Type_Payable"/>
     </record>
 
-    <record  id="chart4174" model="account.account">
+    <record  id="chart4174" model="account.account.template">
       <field name="name">AFP Habitat</field>
       <field name="code">4174000</field>
       <field name="user_type_id" ref="liability_payable"/>
