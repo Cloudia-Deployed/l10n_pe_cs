@@ -7,10 +7,6 @@
 
   <data>
 
-    <record  id="l10n_pe.chart417" model="account.account.template">
-      <field name="deprecated" eval="True"/>
-    </record>
-
     <record  id="chart4171" model="account.account.template">
       <field name="name">AFP Integra</field>
       <field name="code">4171000</field>
