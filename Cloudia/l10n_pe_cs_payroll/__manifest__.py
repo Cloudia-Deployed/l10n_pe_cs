@@ -13,6 +13,8 @@
 
   'depends'              :  [
                               'hr_payroll',
+                              'account_accountant',
+                              'l10n_pe',
                             ],
 
   'demo'                 :  [
@@ -20,7 +22,7 @@
                             ],
 
   'data'                 :  [
-                              'data/hr_payroll_account_journal.xml',
+                              'data/account_journal_data.xml',
                               # 'views/hr_contract_view.xml'
                             ],
 
