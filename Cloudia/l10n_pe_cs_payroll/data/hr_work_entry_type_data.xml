@@ -95,6 +95,6 @@
       <field name="unpaid_structure_ids"></field>
     </record>
 
-  <data>
+  </data>
 
-<odoo>
+</odoo>
