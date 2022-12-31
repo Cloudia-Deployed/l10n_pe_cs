@@ -14,8 +14,8 @@
       <field name="color">0</field>
       <field name="round_days">NO</field>
       <field name="round_days_type">DOWN</field>
-      <field name="is_leave" eval="false"/>
-      <field name="is_unforeseen" eval="false"/>
+      <field name="is_leave" eval="False"/>
+      <field name="is_unforeseen" eval="False"/>
       <field name="unpaid_structure_ids"></field>
     </record>
 
@@ -27,7 +27,7 @@
       <field name="round_days">HALF</field>
       <field name="round_days_type">UP</field>
       <field name="is_leave" eval="true"/>
-      <field name="is_unforeseen" eval="false"/>
+      <field name="is_unforeseen" eval="False"/>
       <field name="unpaid_structure_ids"></field>
     </record>
 
@@ -39,7 +39,7 @@
       <field name="round_days">HALF</field>
       <field name="round_days_type">UP</field>
       <field name="is_leave" eval="true"/>
-      <field name="is_unforeseen" eval="false"/>
+      <field name="is_unforeseen" eval="False"/>
       <field name="unpaid_structure_ids"></field>
     </record>
 
@@ -55,7 +55,7 @@
       <field name="round_days">NO</field>
       <field name="round_days_type">DOWN</field>
       <field name="is_leave" eval="true"/>
-      <field name="is_unforeseen" eval="false"/>
+      <field name="is_unforeseen" eval="False"/>
       <field name="unpaid_structure_ids">Sueldo base mensual,Alternativa</field>
     </record>
 
@@ -67,7 +67,7 @@
       <field name="round_days">NO</field>
       <field name="round_days_type">DOWN</field>
       <field name="is_leave" eval="true"/>
-      <field name="is_unforeseen" eval="false"/>
+      <field name="is_unforeseen" eval="False"/>
       <field name="unpaid_structure_ids"></field>
     </record>
 
@@ -79,7 +79,7 @@
       <field name="round_days">FULL</field>
       <field name="round_days_type">DOWN</field>
       <field name="is_leave" eval="true"/>
-      <field name="is_unforeseen" eval="false"/>
+      <field name="is_unforeseen" eval="False"/>
       <field name="unpaid_structure_ids"></field>
     </record>
 
@@ -90,8 +90,8 @@
       <field name="color">0</field>
       <field name="round_days">NO</field>
       <field name="round_days_type">HALF-UP</field>
-      <field name="is_leave" eval="false"/>
-      <field name="is_unforeseen" eval="false"/>
+      <field name="is_leave" eval="False"/>
+      <field name="is_unforeseen" eval="False"/>
       <field name="unpaid_structure_ids"></field>
     </record>
 
