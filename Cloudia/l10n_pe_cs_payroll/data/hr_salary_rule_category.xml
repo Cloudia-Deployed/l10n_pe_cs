@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo - Module Developed by Cloudia Systems S.A.C. | http://cloudia.systems | <info@cloudia.systems> -->
+<!-- Copyright (c) 2021-Present Cloudia Systems S.A.C. -->
+<!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
+
+<odoo>
+
+  <data>
+
+    <record  id="hr_payroll.BASIC" model="hr.salary.rule.category">
+        <field name="id">Remuneración Base</field>
+        <field name="name">Remuneración Base</field>
+        <field name="code">BASE</field>
+        <field name="note"></field>
+        <field name="parent_id" ref="hr_payroll.GROSS"/>
+    </record>
+
+    <record  id="hr_payroll.BASIC" model="hr.salary.rule.category">
+        <field name="id">Adiciones</field>
+        <field name="name">Adiciones</field>
+        <field name="code">ADD</field>
+        <field name="note"></field>
+        <field name="parent_id" ref="hr_payroll.GROSS"/>
+    </record>
+
+    <record  id="hr_payroll.BASIC" model="hr.salary.rule.category">
+        <field name="id">Remuneración Bruta</field>
+        <field name="name">Remuneración Bruta</field>
+        <field name="code">GROSS</field>
+        <field name="note"></field>
+        <field name="parent_id" ref="hr_payroll.NET"/>
+    </record>
+
+    <record  id="hr_payroll.BASIC" model="hr.salary.rule.category">
+        <field name="id">Deducciones</field>
+        <field name="name">Deducciones</field>
+        <field name="code">DED</field>
+        <field name="note"></field>
+        <field name="parent_id" ref="hr_payroll.NET"/>
+    </record>
+
+    <record  id="hr_payroll.BASIC" model="hr.salary.rule.category">
+        <field name="id">Impuesto a la renta</field>
+        <field name="name">Impuesto a la renta</field>
+        <field name="code">TAX</field>
+        <field name="note"></field>
+        <field name="parent_id" ref="hr_payroll.DED"/>
+    </record>
+
+    <record  id="hr_payroll.BASIC" model="hr.salary.rule.category">
+        <field name="id">Neto a pagar</field>
+        <field name="name">Neto a pagar</field>
+        <field name="code">NET</field>
+        <field name="note"></field>
+    </record>
+
+    <record  id="hr_payroll.BASIC" model="hr.salary.rule.category">
+        <field name="id">Contribuciones</field>
+        <field name="name">Contribuciones</field>
+        <field name="code">COMP</field>
+        <field name="note"></field>
+    </record>
+
+    <record  id="hr_payroll.BASIC" model="hr.salary.rule.category">
+        <field name="id">Devengos</field>
+        <field name="name">Devengos</field>
+        <field name="code">DEV</field>
+        <field name="note"></field>
+    </record>
+
+  </data>
+
+</odoo>

@@ -26,6 +26,7 @@
                               #'data/account_account_data.xml',
                               'data/hr_rule_parameter_data.xml',
                               'data/hr_payroll_structure_type_data.xml',
+                              'data/hr_salary_rule_category.xml',
                               # 'views/hr_contract_view.xml'
                             ],
 
