@@ -56,7 +56,7 @@
       <field name="round_days_type">DOWN</field>
       <field name="is_leave" eval="true"/>
       <field name="is_unforeseen" eval="False"/>
-      <field name="unpaid_structure_ids"></field>
+      <field name="unpaid_structure_ids" ref=""/>
     </record>
 
     <record  id="hr_work_entry_contract.work_entry_type_sick_leave" model="hr.work.entry.type">
@@ -68,7 +68,7 @@
       <field name="round_days_type">DOWN</field>
       <field name="is_leave" eval="true"/>
       <field name="is_unforeseen" eval="False"/>
-      <field name="unpaid_structure_ids"></field>
+      <field name="unpaid_structure_ids" ref=""/>
     </record>
 
     <record  id="hr_work_entry_contract.work_entry_type_legal_leave" model="hr.work.entry.type">
@@ -80,7 +80,7 @@
       <field name="round_days_type">DOWN</field>
       <field name="is_leave" eval="true"/>
       <field name="is_unforeseen" eval="False"/>
-      <field name="unpaid_structure_ids"></field>
+      <field name="unpaid_structure_ids" ref=""/>
     </record>
 
     <record  id="hr_payroll.hr_work_entry_type_out_of_contract" model="hr.work.entry.type">
@@ -92,7 +92,7 @@
       <field name="round_days_type">HALF-UP</field>
       <field name="is_leave" eval="False"/>
       <field name="is_unforeseen" eval="False"/>
-      <field name="unpaid_structure_ids"></field>
+      <field name="unpaid_structure_ids" ref=""/>
     </record>
 
   </data>
