@@ -11,21 +11,21 @@
       <field name="name">Commission</field>
       <field name="code">COMMISSION</field>
       <!-- <field name="struct_ids" ref=""/> -->
-      <field name="country_id/id">base.pe</field>
+      <field name="country_id">base.pe</field>
     </record>
 
     <record  id="hr_payroll.input_bonus" model="hr.payslip.input.type">
       <field name="name">Bonus</field>
       <field name="code">BONUS</field>
       <!-- <field name="struct_ids" ref=""/> -->
-      <field name="country_id/id">base.pe</field>
+      <field name="country_id">base.pe</field>
     </record>
 
     <record  id="hr_payroll.input_gratuity" model="hr.payslip.input.type">
       <field name="name">Gratuity</field>
       <field name="code">GRATUITY</field>
       <!-- <field name="struct_ids" ref=""/> -->
-      <field name="country_id/id">base.pe</field>
+      <field name="country_id">base.pe</field>
     </record>
 
   </data>
