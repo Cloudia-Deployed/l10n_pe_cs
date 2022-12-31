@@ -8,55 +8,31 @@
   <data>
 
     <record  id="hr_payroll.BASIC" model="hr.salary.rule.category">
-        <field name="name">Remuneración Base</field>
-        <field name="code">BASE</field>
-        <field name="note"></field>
         <field name="parent_id" ref="hr_payroll.GROSS"/>
     </record>
 
-    <record  id="hr_payroll.BASIC" model="hr.salary.rule.category">
-        <field name="name">Adiciones</field>
-        <field name="code">ADD</field>
-        <field name="note"></field>
+    <record  id="hr_payroll.ALW" model="hr.salary.rule.category">
         <field name="parent_id" ref="hr_payroll.GROSS"/>
     </record>
 
-    <record  id="hr_payroll.BASIC" model="hr.salary.rule.category">
-        <field name="name">Remuneración Bruta</field>
-        <field name="code">GROSS</field>
-        <field name="note"></field>
+    <record  id="hr_payroll.GROSS" model="hr.salary.rule.category">
         <field name="parent_id" ref="hr_payroll.NET"/>
     </record>
 
-    <record  id="hr_payroll.BASIC" model="hr.salary.rule.category">
-        <field name="name">Deducciones</field>
-        <field name="code">DED</field>
-        <field name="note"></field>
+    <record  id="hr_payroll.DED" model="hr.salary.rule.category">
         <field name="parent_id" ref="hr_payroll.NET"/>
     </record>
 
-    <record  id="hr_payroll.BASIC" model="hr.salary.rule.category">
-        <field name="name">Impuesto a la renta</field>
+    <record  id="hr_payroll.TAX" model="hr.salary.rule.category">
+        <field name="name">Income Tax</field>
         <field name="code">TAX</field>
         <field name="note"></field>
         <field name="parent_id" ref="hr_payroll.DED"/>
     </record>
 
-    <record  id="hr_payroll.BASIC" model="hr.salary.rule.category">
-        <field name="name">Neto a pagar</field>
-        <field name="code">NET</field>
-        <field name="note"></field>
-    </record>
-
-    <record  id="hr_payroll.BASIC" model="hr.salary.rule.category">
-        <field name="name">Contribuciones</field>
-        <field name="code">COMP</field>
-        <field name="note"></field>
-    </record>
-
-    <record  id="hr_payroll.BASIC" model="hr.salary.rule.category">
-        <field name="name">Devengos</field>
-        <field name="code">DEV</field>
+    <record  id="hr_payroll.ACC" model="hr.salary.rule.category">
+        <field name="name">Accrual</field>
+        <field name="code">ACC</field>
         <field name="note"></field>
     </record>
 
