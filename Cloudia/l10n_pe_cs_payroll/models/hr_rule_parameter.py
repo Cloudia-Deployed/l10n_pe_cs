@@ -3,5 +3,10 @@
 # Copyright (c) 2021-TODAY Cloudia Systems S.A.C.
 # See LICENSE and COPYRIGHT files for full copyright and licensing details.
 
-from . import hr_payslip
-from . import hr_rule_parameter
+from odoo import models, fields
+
+
+class HrRuleParameter(models.Model):
+    _inherit = 'hr.rule.parameter'
+
+    category = fields.Char(string="Category")

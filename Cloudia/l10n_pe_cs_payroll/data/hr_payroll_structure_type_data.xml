@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo - Module Developed by Cloudia Systems S.A.C. | http://cloudia.systems | <info@cloudia.systems> -->
+<!-- Copyright (c) 2021-Present Cloudia Systems S.A.C. -->
+<!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
+
+<odoo>
+
+  <data>
+
+      <record  id="structure_type_general" model="hr.payroll.structure.type">
+        <field name="name">Régimen general</field>
+        <field name="default_schedule_pay">monthly</field>
+        <field name="wage_type">monthly</field>
+        <field name="default_struct_id"></field>
+        <field name="country_id">base.pe</field>
+        <field name="default_work_entry_type_id" eval="hr_work_entry.work_entry_type_attendance"/>
+        <field name="default_resource_calendar_id" eval="resource.resource_calendar_std"/>
+      </record>
+
+      <record  id="structure_type_factory" model="hr.payroll.structure.type">
+        <field name="name">Régimen general - Obrero</field>
+        <field name="default_schedule_pay">monthly</field>
+        <field name="wage_type">monthly</field>
+        <field name="default_struct_id"></field>
+        <field name="country_id">base.pe</field>
+        <field name="default_work_entry_type_id" eval="hr_work_entry.work_entry_type_attendance"/>
+        <field name="default_resource_calendar_id" eval="resource.resource_calendar_std"/>
+      </record>
+
+      <record  id="structure_type_sales" model="hr.payroll.structure.type">
+        <field name="name">Régimen general - Comercial</field>
+        <field name="default_schedule_pay">monthly</field>
+        <field name="wage_type">monthly</field>
+        <field name="default_struct_id"></field>
+        <field name="country_id">base.pe</field>
+        <field name="default_work_entry_type_id" eval="hr_work_entry.work_entry_type_attendance"/>
+        <field name="default_resource_calendar_id" eval="resource.resource_calendar_std"/>
+      </record>
+
+   </data>
+
+ </odoo>
