@@ -56,7 +56,7 @@
       <field name="round_days_type">DOWN</field>
       <field name="is_leave" eval="true"/>
       <field name="is_unforeseen" eval="False"/>
-      <field name="unpaid_structure_ids">Sueldo base mensual,Alternativa</field>
+      <field name="unpaid_structure_ids"></field>
     </record>
 
     <record  id="hr_work_entry_contract.work_entry_type_sick_leave" model="hr.work.entry.type">
