@@ -23,14 +23,14 @@
         <field name="parent_id" ref="hr_payroll.NET"/>
     </record>
 
-    <record  id="hr_payroll.TAX" model="hr.salary.rule.category">
+    <record  id="TAX" model="hr.salary.rule.category">
         <field name="name">Income Tax</field>
         <field name="code">TAX</field>
         <field name="note"></field>
         <field name="parent_id" ref="hr_payroll.DED"/>
     </record>
 
-    <record  id="hr_payroll.ACC" model="hr.salary.rule.category">
+    <record  id="ACC" model="hr.salary.rule.category">
         <field name="name">Accrual</field>
         <field name="code">ACC</field>
         <field name="note"></field>
