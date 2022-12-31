@@ -16,7 +16,7 @@
       <field name="round_days_type">DOWN</field>
       <field name="is_leave" eval="False"/>
       <field name="is_unforeseen" eval="False"/>
-      <field name="unpaid_structure_ids"></field>
+      <!-- <field name="unpaid_structure_ids"></field> -->
     </record>
 
     <record  id="hr_work_entry_contract.work_entry_type_leave" model="hr.work.entry.type">
@@ -26,9 +26,9 @@
       <field name="color">3</field>
       <field name="round_days">HALF</field>
       <field name="round_days_type">UP</field>
-      <field name="is_leave" eval="true"/>
+      <field name="is_leave" eval="True"/>
       <field name="is_unforeseen" eval="False"/>
-      <field name="unpaid_structure_ids"></field>
+      <!-- <field name="unpaid_structure_ids"></field> -->
     </record>
 
     <record  id="hr_work_entry_contract.work_entry_type_compensatory" model="hr.work.entry.type">
@@ -38,9 +38,9 @@
       <field name="color">3</field>
       <field name="round_days">HALF</field>
       <field name="round_days_type">UP</field>
-      <field name="is_leave" eval="true"/>
+      <field name="is_leave" eval="True"/>
       <field name="is_unforeseen" eval="False"/>
-      <field name="unpaid_structure_ids"></field>
+      <!-- <field name="unpaid_structure_ids"></field> -->
     </record>
 
     <record  id="hr_work_entry_contract.work_entry_type_home_working" model="hr.work.entry.type">
@@ -54,9 +54,9 @@
       <field name="color">5</field>
       <field name="round_days">NO</field>
       <field name="round_days_type">DOWN</field>
-      <field name="is_leave" eval="true"/>
+      <field name="is_leave" eval="True"/>
       <field name="is_unforeseen" eval="False"/>
-      <field name="unpaid_structure_ids" ref=""/>
+      <!-- <field name="unpaid_structure_ids"></field> -->
     </record>
 
     <record  id="hr_work_entry_contract.work_entry_type_sick_leave" model="hr.work.entry.type">
@@ -66,9 +66,9 @@
       <field name="color">5</field>
       <field name="round_days">NO</field>
       <field name="round_days_type">DOWN</field>
-      <field name="is_leave" eval="true"/>
+      <field name="is_leave" eval="True"/>
       <field name="is_unforeseen" eval="False"/>
-      <field name="unpaid_structure_ids" ref=""/>
+      <!-- <field name="unpaid_structure_ids"></field> -->
     </record>
 
     <record  id="hr_work_entry_contract.work_entry_type_legal_leave" model="hr.work.entry.type">
@@ -78,9 +78,9 @@
       <field name="color">5</field>
       <field name="round_days">FULL</field>
       <field name="round_days_type">DOWN</field>
-      <field name="is_leave" eval="true"/>
+      <field name="is_leave" eval="True"/>
       <field name="is_unforeseen" eval="False"/>
-      <field name="unpaid_structure_ids" ref=""/>
+      <!-- <field name="unpaid_structure_ids"></field> -->
     </record>
 
     <record  id="hr_payroll.hr_work_entry_type_out_of_contract" model="hr.work.entry.type">
@@ -92,7 +92,7 @@
       <field name="round_days_type">HALF-UP</field>
       <field name="is_leave" eval="False"/>
       <field name="is_unforeseen" eval="False"/>
-      <field name="unpaid_structure_ids" ref=""/>
+      <!-- <field name="unpaid_structure_ids"></field> -->
     </record>
 
   </data>
