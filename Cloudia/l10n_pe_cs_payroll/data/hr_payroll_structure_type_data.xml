@@ -12,9 +12,9 @@
         <field name="default_schedule_pay">monthly</field>
         <field name="wage_type">monthly</field>
         <field name="default_struct_id"></field>
-        <field name="country_id" eval="base.pe"/>
-        <field name="default_work_entry_type_id" eval="hr_work_entry.work_entry_type_attendance"/>
-        <field name="default_resource_calendar_id" eval="resource.resource_calendar_std"/>
+        <field name="country_id" ref="base.pe"/>
+        <field name="default_work_entry_type_id" ref="hr_work_entry.work_entry_type_attendance"/>
+        <field name="default_resource_calendar_id" ref="resource.resource_calendar_std"/>
       </record>
 
       <record  id="structure_type_factory" model="hr.payroll.structure.type">
@@ -22,9 +22,9 @@
         <field name="default_schedule_pay">monthly</field>
         <field name="wage_type">monthly</field>
         <field name="default_struct_id"></field>
-        <field name="country_id" eval="base.pe"/>
-        <field name="default_work_entry_type_id" eval="hr_work_entry.work_entry_type_attendance"/>
-        <field name="default_resource_calendar_id" eval="resource.resource_calendar_std"/>
+        <field name="country_id" ref="base.pe"/>
+        <field name="default_work_entry_type_id" ref="hr_work_entry.work_entry_type_attendance"/>
+        <field name="default_resource_calendar_id" ref="resource.resource_calendar_std"/>
       </record>
 
       <record  id="structure_type_sales" model="hr.payroll.structure.type">
@@ -32,9 +32,9 @@
         <field name="default_schedule_pay">monthly</field>
         <field name="wage_type">monthly</field>
         <field name="default_struct_id"></field>
-        <field name="country_id" eval="base.pe"/>
-        <field name="default_work_entry_type_id" eval="hr_work_entry.work_entry_type_attendance"/>
-        <field name="default_resource_calendar_id" eval="resource.resource_calendar_std"/>
+        <field name="country_id" ref="base.pe"/>
+        <field name="default_work_entry_type_id" ref="hr_work_entry.work_entry_type_attendance"/>
+        <field name="default_resource_calendar_id" ref="resource.resource_calendar_std"/>
       </record>
 
    </data>
