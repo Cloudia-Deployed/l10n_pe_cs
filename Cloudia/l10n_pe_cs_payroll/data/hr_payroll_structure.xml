@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo - Module Developed by Cloudia Systems S.A.C. | http://cloudia.systems | <info@cloudia.systems> -->
+<!-- Copyright (c) 2021-Present Cloudia Systems S.A.C. -->
+<!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
+
+<odoo>
+  <data>
+    <record  id="structure_general" model="hr.payroll.structure">
+      <field name="name">Régimen general</field>
+      <field name="type_id" ref="structure_type_general"/>
+      <field name="use_worked_day_lines" eval="True"/>
+      <field name="country_id" ref="base.pe"/>
+      <field name="schedule_pay">monthly</field>
+      <field name="journal_id" ref="hr_payroll_account_journal"/>
+    </record>
+  </data>
+</odoo>

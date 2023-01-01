@@ -36,6 +36,27 @@
         <field name="note"></field>
     </record>
 
+    <record  id="CTS" model="hr.salary.rule.category">
+        <field name="name">Compensación por Tiempo de Servicio</field>
+        <field name="code">CTS</field>
+        <field name="parent_id" ref="ACC"/>
+        <field name="note"></field>
+    </record>
+
+    <record  id="PTO" model="hr.salary.rule.category">
+        <field name="name">Vacations</field>
+        <field name="code">PTO</field>
+        <field name="parent_id" ref="ACC"/>
+        <field name="note"></field>
+    </record>
+
+    <record  id="RBN" model="hr.salary.rule.category">
+        <field name="name">Regular Bonus Pay</field>
+        <field name="code">RBN</field>
+        <field name="parent_id" ref="ACC"/>
+        <field name="note"></field>
+    </record>
+
   </data>
 
 </odoo>

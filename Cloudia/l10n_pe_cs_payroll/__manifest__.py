@@ -12,8 +12,8 @@
   'website'              :  'https://cloudia.systems/',
 
   'depends'              :  [
-                              'hr_payroll',
-                              'account_accountant',
+                              'hr_payroll_account',
+                              'hr_holidays',
                               'l10n_pe',
                             ],
 
@@ -29,6 +29,7 @@
                               'data/hr_salary_rule_category_data.xml',
                               'data/hr_work_entry_type_data.xml',
                               'data/hr_payslip_input_type.xml',
+                              'data/hr_payroll_structure.xml',
                               # 'views/hr_contract_view.xml'
                             ],
 
