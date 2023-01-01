@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo - Module Developed by Cloudia Systems S.A.C. | http://cloudia.systems | <info@cloudia.systems> -->
+<!-- Copyright (c) 2021-Present Cloudia Systems S.A.C. -->
+<!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
+
+<odoo>
+    <record id="hr_plan_retirement_view_form" model="ir.ui.view">
+        <field name="name">hr.plan_retirement.view.form</field>
+        <field name="model">hr.plan_retirement</field>
+        <field name="arch" type="xml">
+            <form string="HR Plan Retirement">
+                <sheet>
+                    <group>
+                        <field name="code" />
+                        <field name="name" />
+                        <field name="onp" />
+                        <field name="fund" />
+                        <field name="commission" />
+                        <field name="insurance" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="hr_plan_retirement_view_tree" model="ir.ui.view">
+        <field name="name">hr.plan_retirement.view.tree</field>
+        <field name="model">hr.plan_retirement</field>
+        <field name="arch" type="xml">
+            <tree string="HR Plan Retirement">
+                <field name="code" />
+                <field name="name" />
+                <field name="onp" />
+                <field name="fund" />
+                <field name="commission" />
+                <field name="insurance" />
+            </tree>
+        </field>
+    </record>
+    <record id="action_hr_plan_retirement" model="ir.actions.act_window">
+        <field name="name">HR Plan Retirement</field>
+        <field name="res_model">hr.plan_retirement</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="hr_plan_retirement_menu" name="HR Plan Retirement" parent="hr.menu_config_plan" action="action_hr_plan_retirement"/>
+</odoo>

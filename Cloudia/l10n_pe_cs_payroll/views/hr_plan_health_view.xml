@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo - Module Developed by Cloudia Systems S.A.C. | http://cloudia.systems | <info@cloudia.systems> -->
+<!-- Copyright (c) 2021-Present Cloudia Systems S.A.C. -->
+<!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
+
+<odoo>
+    <record id="hr_plan_health_view_form" model="ir.ui.view">
+        <field name="name">hr.plan_health.view.form</field>
+        <field name="model">hr.plan_health</field>
+        <field name="arch" type="xml">
+            <form string="HR Plan Health">
+                <sheet>
+                    <group>
+                        <field name="code" />
+                        <field name="name" />
+                        <field name="price" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="hr_plan_health_view_tree" model="ir.ui.view">
+        <field name="name">hr.plan_health.view.tree</field>
+        <field name="model">hr.plan_health</field>
+        <field name="arch" type="xml">
+            <tree string="HR Plan Health">
+                <field name="code" />
+                <field name="name" />
+                <field name="price" />
+            </tree>
+        </field>
+    </record>
+    <record id="action_hr_plan_health" model="ir.actions.act_window">
+        <field name="name">HR Plan Health</field>
+        <field name="res_model">hr.plan_health</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="hr_plan_health_menu" name="HR Plan Health" parent="hr.menu_config_plan" action="action_hr_plan_health"/>
+</odoo>

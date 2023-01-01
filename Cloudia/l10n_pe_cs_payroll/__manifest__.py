@@ -22,15 +22,26 @@
                             ],
 
   'data'                 :  [
-                              'data/account_journal_data.xml',
-                              #'data/account_account_data.xml',
-                              'data/hr_rule_parameter_data.xml',
-                              'data/hr_payroll_structure_type_data.xml',
-                              'data/hr_salary_rule_category_data.xml',
-                              'data/hr_work_entry_type_data.xml',
-                              'data/hr_payslip_input_type.xml',
-                              'data/hr_payroll_structure.xml',
-                              # 'views/hr_contract_view.xml'
+                                # Data
+                                'data/account_journal_data.xml',
+                                #'data/account_account_data.xml',
+                                'data/hr_rule_parameter_data.xml',
+                                'data/hr_payroll_structure_type_data.xml',
+                                'data/hr_salary_rule_category_data.xml',
+                                'data/hr_work_entry_type_data.xml',
+                                'data/hr_payslip_input_type.xml',
+                                'data/hr_payroll_structure.xml',
+
+                                # Views
+                                'views/hr_contract_view.xml',
+                                'views/hr_income_tax_view.xml',
+                                'views/hr_payslip_view.xml',
+                                'views/hr_plan_health_view.xml',
+                                'views/hr_plan_life_view.xml',
+                                'views/hr_plan_retirement_view.xml',
+                                'views/hr_rule_parameter_view.xml',
+                                'views/hr_union_plan_view.xml',
+                                'views/hr_union_view.xml',
                             ],
 
   'qweb'                 :  [

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo - Module Developed by Cloudia Systems S.A.C. | http://cloudia.systems | <info@cloudia.systems> -->
+<!-- Copyright (c) 2021-Present Cloudia Systems S.A.C. -->
+<!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
+
+<odoo>
+    <record id="hr_income_tax_view_form" model="ir.ui.view">
+        <field name="name">hr.income_tax.view.form</field>
+        <field name="model">hr.income_tax</field>
+        <field name="arch" type="xml">
+            <form string="HR Income Tax">
+                <sheet>
+                    <group>
+                        <field name="sequence" />
+                        <field name="name" />
+                        <field name="uit_value" />
+                        <field name="tax_rate" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="hr_income_tax_view_tree" model="ir.ui.view">
+        <field name="name">hr.income_tax.view.tree</field>
+        <field name="model">hr.income_tax</field>
+        <field name="arch" type="xml">
+            <tree string="HR Income Tax">
+                <field name="sequence" />
+                <field name="name" />
+                <field name="uit_value" />
+                <field name="tax_rate" />
+            </tree>
+        </field>
+    </record>
+    <record id="action_hr_income_tax" model="ir.actions.act_window">
+        <field name="name">HR Income Tax</field>
+        <field name="res_model">hr.income_tax</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="hr_income_tax_menu" name="HR Income Tax" parent="hr.menu_config_plan" action="action_hr_income_tax"/>
+</odoo>

@@ -4,7 +4,9 @@
 <!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
 
 <odoo>
+
   <data>
+
     <record  id="structure_general" model="hr.payroll.structure">
       <field name="name">Régimen general</field>
       <field name="type_id" ref="structure_type_general"/>
@@ -13,5 +15,43 @@
       <field name="schedule_pay">monthly</field>
       <field name="journal_id" ref="hr_payroll_account_journal"/>
     </record>
+
+    <record  id="structure_quincena" model="hr.payroll.structure">
+      <field name="name">Quincena</field>
+      <field name="type_id" ref="structure_type_general"/>
+      <field name="use_worked_day_lines" eval="True"/>
+      <field name="country_id" ref="base.pe"/>
+      <field name="schedule_pay">monthly</field>
+      <field name="journal_id" ref="hr_payroll_account_journal"/>
+    </record>
+
+    <record  id="structure_cts" model="hr.payroll.structure">
+      <field name="name">CTS</field>
+      <field name="type_id" ref="structure_type_general"/>
+      <field name="use_worked_day_lines" eval="True"/>
+      <field name="country_id" ref="base.pe"/>
+      <field name="schedule_pay">semi-annually</field>
+      <field name="journal_id" ref="hr_payroll_account_journal"/>
+    </record>
+
+    <record  id="structure_bonus" model="hr.payroll.structure">
+      <field name="name">Bonus</field>
+      <field name="type_id" ref="structure_type_general"/>
+      <field name="use_worked_day_lines" eval="True"/>
+      <field name="country_id" ref="base.pe"/>
+      <field name="schedule_pay">semi-annually</field>
+      <field name="journal_id" ref="hr_payroll_account_journal"/>
+    </record>
+
+    <record  id="structure_termination" model="hr.payroll.structure">
+      <field name="name">Termination</field>
+      <field name="type_id" ref="structure_type_general"/>
+      <field name="use_worked_day_lines" eval="True"/>
+      <field name="country_id" ref="base.pe"/>
+      <field name="schedule_pay">annually</field>
+      <field name="journal_id" ref="hr_payroll_account_journal"/>
+    </record>
+
   </data>
+
 </odoo>
