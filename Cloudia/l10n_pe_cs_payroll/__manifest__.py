@@ -35,7 +35,7 @@
                                 # Views
                                 'views/hr_contract_view.xml',
                                 'views/hr_income_tax_view.xml',
-                                'views/hr_payslip_view.xml',
+                                #'views/hr_payslip_view.xml',
                                 'views/hr_plan_health_view.xml',
                                 'views/hr_plan_life_view.xml',
                                 'views/hr_plan_retirement_view.xml',
