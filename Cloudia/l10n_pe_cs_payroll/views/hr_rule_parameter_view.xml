@@ -4,29 +4,13 @@
 <!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
 
 <odoo>
-    <record id="inherit_hr_rule_parameter_value_view_form" model="ir.ui.view">
-        <field name="name">hr.rule.parameter.value.form</field>
-        <field name="model">hr.rule.parameter.value</field>
-        <field name="inherit_id" ref="hr_payroll.hr_rule_parameter_value_view_form" />
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='rule_parameter_id']" position="before">
-                <field name="value_id" readonly="1" force_save="1"/>
-            </xpath>
-            <xpath expr="//field[@name='rule_parameter_id']" position="attributes">
-                <attribute name="readonly">1</attribute>
-                <attribute name="force_save">1</attribute>
-                <attribute name="required">0</attribute>
-            </xpath>
-        </field>
-    </record>
-
     <record id="inherit_hr_rule_parameter_view_form" model="ir.ui.view">
         <field name="name">hr.rule.parameter.form</field>
         <field name="model">hr.rule.parameter</field>
         <field name="inherit_id" ref="hr_payroll.hr_rule_parameter_view_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='parameter_version_ids']/tree/field[@name='date_from']" position="before">
-                <field name="value_id" readonly="1" force_save="1"/>
+                <field name="category"/>
             </xpath>
         </field>
     </record>
