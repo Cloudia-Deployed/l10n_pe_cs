@@ -4,6 +4,7 @@
 <!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
 
 <odoo>
+
     <record id="hr_income_tax_view_form" model="ir.ui.view">
         <field name="name">hr.income_tax.view.form</field>
         <field name="model">hr.income_tax</field>
@@ -20,6 +21,7 @@
             </form>
         </field>
     </record>
+
     <record id="hr_income_tax_view_tree" model="ir.ui.view">
         <field name="name">hr.income_tax.view.tree</field>
         <field name="model">hr.income_tax</field>
@@ -32,10 +34,13 @@
             </tree>
         </field>
     </record>
+
     <record id="action_hr_income_tax" model="ir.actions.act_window">
         <field name="name">HR Income Tax</field>
         <field name="res_model">hr.income_tax</field>
         <field name="view_mode">tree,form</field>
     </record>
-    <menuitem id="hr_income_tax_menu" name="HR Income Tax" parent="hr.menu_config_plan" action="action_hr_income_tax"/>
+
+    <menuitem id="hr_income_tax_menu" name="Income Tax" parent="hr_payroll.menu_hr_salary_configuration" action="action_hr_income_tax"/>
+
 </odoo>
