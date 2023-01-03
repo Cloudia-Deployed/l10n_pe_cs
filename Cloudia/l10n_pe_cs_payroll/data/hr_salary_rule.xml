@@ -24,7 +24,7 @@
       <field name="condition_range_min">0</field>
       <field name="condition_python"></field>
       <!-- Calculation -->
-      <field name="amount_select">none</field>
+      <field name="amount_select">code</field>
       <field name="amount_fix">0</field>
       <field name="amount_percentage">0</field>
       <field name="quantity">0</field>
@@ -47,7 +47,7 @@
       <field name="condition_range_min">0</field>
       <field name="condition_python">result = payslip.date_from.month in [7, 12]</field>
       <!-- Calculation -->
-      <field name="amount_select">none</field>
+      <field name="amount_select">code</field>
       <field name="amount_fix">0</field>
       <field name="amount_percentage">0</field>
       <field name="quantity">0</field>
