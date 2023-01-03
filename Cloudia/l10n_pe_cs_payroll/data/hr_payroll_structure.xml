@@ -24,6 +24,7 @@
       <field name="country_id" ref="base.pe"/>
       <field name="schedule_pay">monthly</field>
       <field name="journal_id" ref="hr_payroll_account_journal"/>
+      <field name="rule_ids" eval="False"/>
     </record>
 
     <record  id="structure_cts" model="hr.payroll.structure">
@@ -33,6 +34,7 @@
       <field name="country_id" ref="base.pe"/>
       <field name="schedule_pay">semi-annually</field>
       <field name="journal_id" ref="hr_payroll_account_journal"/>
+      <field name="rule_ids" eval="False"/>
     </record>
 
     <record  id="structure_bonus" model="hr.payroll.structure">
@@ -42,6 +44,7 @@
       <field name="country_id" ref="base.pe"/>
       <field name="schedule_pay">semi-annually</field>
       <field name="journal_id" ref="hr_payroll_account_journal"/>
+      <field name="rule_ids" eval="False"/>
     </record>
 
     <record  id="structure_termination" model="hr.payroll.structure">
@@ -51,6 +54,7 @@
       <field name="country_id" ref="base.pe"/>
       <field name="schedule_pay">annually</field>
       <field name="journal_id" ref="hr_payroll_account_journal"/>
+      <field name="rule_ids" eval="False"/>
     </record>
 
   </data>

@@ -31,6 +31,7 @@
                                 'data/hr_work_entry_type_data.xml',
                                 'data/hr_payslip_input_type.xml',
                                 'data/hr_payroll_structure.xml',
+                                'data/hr_salary_rule.xml',
 
                                 # Views
                                 'views/hr_contract_view.xml',

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo - Module Developed by Cloudia Systems S.A.C. | http://cloudia.systems | <info@cloudia.systems> -->
+<!-- Copyright (c) 2021-Present Cloudia Systems S.A.C. -->
+<!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
+
+<odoo>
+
+  <data>
+
+    <!-- CTS -->
+
+    <record  id="salary_rule_CTSACC" model="hr.salary.rule">
+      <field name="name">CTS Accrual</field>
+      <field name="code">CTSACC</field>
+      <field name="sequence">10</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="CTS"/>
+      <field name="appears_on_payslip" eval="True"/>
+      <field name="not_computed_in_net" eval="True"/>
+      <!-- Condition -->
+      <field name="condition_select">none</field>
+      <field name="condition_range"></field>
+      <field name="condition_range_max"></field>
+      <field name="condition_range_min"></field>
+      <field name="condition_python"></field>
+      <!-- Calculation -->
+      <field name="amount_select">none</field>
+      <field name="amount_fix"></field>
+      <field name="amount_percentage"></field>
+      <field name="quantity"></field>
+      <field name="amount_percentage_base"></field>
+      <field name="amount_python_compute">result = - contract.wage * 7 / ( 6 * 12 )</field>
+    </record>
+
+    <record  id="salary_rule_CTS" model="hr.salary.rule">
+      <field name="name">CTS Payment</field>
+      <field name="code">CTS</field>
+      <field name="sequence">10</field>
+      <field name="struct_id" ref="structure_cts"/>
+      <field name="category_id" ref="CTS"/>
+      <field name="appears_on_payslip" eval="True"/>
+      <field name="not_computed_in_net" eval="True"/>
+      <!-- Condition -->
+      <field name="condition_select">python</field>
+      <field name="condition_range"></field>
+      <field name="condition_range_max"></field>
+      <field name="condition_range_min"></field>
+      <field name="condition_python">result = payslip.date_from.month in [7, 12]</field>
+      <!-- Calculation -->
+      <field name="amount_select">none</field>
+      <field name="amount_fix"></field>
+      <field name="amount_percentage"></field>
+      <field name="quantity"></field>
+      <field name="amount_percentage_base"></field>
+      <field name="amount_python_compute">result = - contract.wage * 7 / ( 6 * 12 )</field>
+    </record>
+
+  </data>
+
+</odoo>
