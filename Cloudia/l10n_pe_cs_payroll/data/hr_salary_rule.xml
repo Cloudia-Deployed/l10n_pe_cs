@@ -19,16 +19,16 @@
       <field name="not_computed_in_net" eval="True"/>
       <!-- Condition -->
       <field name="condition_select">none</field>
-      <field name="condition_range"></field>
-      <field name="condition_range_max"></field>
-      <field name="condition_range_min"></field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
       <field name="condition_python"></field>
       <!-- Calculation -->
       <field name="amount_select">none</field>
-      <field name="amount_fix"></field>
-      <field name="amount_percentage"></field>
-      <field name="quantity"></field>
-      <field name="amount_percentage_base"></field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
       <field name="amount_python_compute">result = - contract.wage * 7 / ( 6 * 12 )</field>
     </record>
 
@@ -42,16 +42,16 @@
       <field name="not_computed_in_net" eval="True"/>
       <!-- Condition -->
       <field name="condition_select">python</field>
-      <field name="condition_range"></field>
-      <field name="condition_range_max"></field>
-      <field name="condition_range_min"></field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
       <field name="condition_python">result = payslip.date_from.month in [7, 12]</field>
       <!-- Calculation -->
       <field name="amount_select">none</field>
-      <field name="amount_fix"></field>
-      <field name="amount_percentage"></field>
-      <field name="quantity"></field>
-      <field name="amount_percentage_base"></field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
       <field name="amount_python_compute">result = - contract.wage * 7 / ( 6 * 12 )</field>
     </record>
 
