@@ -37,7 +37,7 @@
       <field name="code">FAMILY</field>
       <field name="sequence">20</field>
       <field name="struct_id" ref="structure_general"/>
-      <field name="category_id" ref="hr_payroll.ADD"/>
+      <field name="category_id" ref="hr_payroll.ALW"/>
       <field name="appears_on_payslip" eval="True"/>
       <field name="not_computed_in_net" eval="False"/>
       <!-- Condition -->
