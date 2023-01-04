@@ -22,7 +22,7 @@
                         <group>
                             <field name="sctr"/>
                             <field name="previous_income"/>
-                            <field name="unions"/>
+                            <field name="plan_union"/>
                             <field name="commisions"/>
                             <field name="attendance_tracking"/>
                         </group>
