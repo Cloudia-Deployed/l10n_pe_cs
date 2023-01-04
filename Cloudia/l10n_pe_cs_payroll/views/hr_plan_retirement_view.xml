@@ -4,6 +4,7 @@
 <!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
 
 <odoo>
+
     <record id="hr_plan_retirement_view_form" model="ir.ui.view">
         <field name="name">hr.plan_retirement.view.form</field>
         <field name="model">hr.plan_retirement</field>
@@ -22,6 +23,7 @@
             </form>
         </field>
     </record>
+
     <record id="hr_plan_retirement_view_tree" model="ir.ui.view">
         <field name="name">hr.plan_retirement.view.tree</field>
         <field name="model">hr.plan_retirement</field>
@@ -36,10 +38,13 @@
             </tree>
         </field>
     </record>
+
     <record id="action_hr_plan_retirement" model="ir.actions.act_window">
         <field name="name">HR Plan Retirement</field>
         <field name="res_model">hr.plan_retirement</field>
         <field name="view_mode">tree,form</field>
     </record>
-    <menuitem id="hr_plan_retirement_menu" name="HR Plan Retirement" parent="hr.menu_config_plan" action="action_hr_plan_retirement"/>
+
+    <menuitem id="hr_plan_retirement_menu" name="HR Plan Retirement" parent="hr_config_peru" action="action_hr_plan_retirement"/>
+
 </odoo>

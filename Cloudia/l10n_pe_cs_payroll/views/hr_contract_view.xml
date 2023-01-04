@@ -18,12 +18,10 @@
                             <field name="plan_retirement"/>
                             <field name="plan_health_contribution"/>
                             <field name="plan_union"/>
-                            <field name="salary_frequency_wage"/>
                         </group>
                         <group>
                             <field name="sctr"/>
                             <field name="previous_income"/>
-                            <field name="previous_income_date"/>
                             <field name="unions"/>
                             <field name="commisions"/>
                             <field name="attendance_tracking"/>
@@ -33,4 +31,7 @@
             </xpath>
         </field>
     </record>
+
+    <menuitem id="hr_config_peru" name="Configurations for Peru" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration"/>
+
 </odoo>

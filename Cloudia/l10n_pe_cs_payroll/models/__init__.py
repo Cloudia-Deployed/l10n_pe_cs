@@ -11,4 +11,3 @@ from . import hr_plan_health
 from . import hr_plan_life
 from . import hr_plan_retirement
 from . import hr_union_plan
-from . import hr_union

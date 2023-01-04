@@ -41,6 +41,6 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="hr_income_tax_menu" name="Income Tax" parent="hr_payroll.menu_hr_salary_configuration" action="action_hr_income_tax"/>
+    <menuitem id="hr_income_tax_menu" name="Income Tax" parent="hr_config_peru" action="action_hr_income_tax"/>
 
 </odoo>

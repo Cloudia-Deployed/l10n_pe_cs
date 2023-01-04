@@ -17,11 +17,8 @@ class Contract(models.Model):
     plan_retirement = fields.Many2one('hr.plan_retirement',string="Retirement Plan")
     plan_health_contribution = fields.Monetary(string="Health Insurance Employer Additional Contribution")
     plan_union = fields.Many2one('hr.union_plan',string="Union dues")
-    salary_frequency_wage = fields.Selection(Salary_Freq, string="Salary payment frequency")
     sctr = fields.Boolean(string="SCTR")
     previous_income = fields.Monetary(string="Previous income")
-    previous_income_date = fields.Date(string="Previous income Date")
-    unions = fields.Many2one('hr.union',string="Union membership")
     commisions = fields.Boolean(string="Commissions")
     attendance_tracking = fields.Boolean(string="Attendance")
 
