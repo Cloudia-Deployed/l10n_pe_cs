@@ -5,4 +5,3 @@ access_hr_plan_retirement,hr.plan_retirement,model_hr_plan_retirement,,1,1,1,1
 access_hr_union,hr.union,model_hr_union,,1,1,1,1
 access_hr_income_tax,hr.income_tax,model_hr_income_tax,,1,1,1,1
 access_hr_union_plan,hr.union_plan,model_hr_union_plan,,1,1,1,1
-access_cts_payslip_line,cts.payslip.line,model_cts_payslip_line,hr_payroll.group_hr_payroll_user,1,1,1,1
