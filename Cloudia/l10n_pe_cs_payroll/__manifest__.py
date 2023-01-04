@@ -43,6 +43,9 @@
                                 'views/hr_rule_parameter_view.xml',
                                 'views/hr_union_plan_view.xml',
                                 'views/hr_union_view.xml',
+
+                                #Security
+                                'security/ir.model.access.csv',
                             ],
 
   'qweb'                 :  [

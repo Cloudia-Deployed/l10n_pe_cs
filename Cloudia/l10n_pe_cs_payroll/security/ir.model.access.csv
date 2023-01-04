@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_plan_health,hr.plan_health,model_hr_plan_health,,1,1,1,1
+access_hr_plan_life,hr.plan_life,model_hr_plan_life,,1,1,1,1
+access_hr_plan_retirement,hr.plan_retirement,model_hr_plan_retirement,,1,1,1,1
+access_hr_union,hr.union,model_hr_union,,1,1,1,1
+access_hr_income_tax,hr.income_tax,model_hr_income_tax,,1,1,1,1
+access_hr_union_plan,hr.union_plan,model_hr_union_plan,,1,1,1,1
+access_cts_payslip_line,cts.payslip.line,model_cts_payslip_line,hr_payroll.group_hr_payroll_user,1,1,1,1
