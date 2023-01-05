@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo - Module Developed by Cloudia Systems S.A.C. | http://cloudia.systems | <info@cloudia.systems> -->
+<!-- Copyright (c) 2021-Present Cloudia Systems S.A.C. -->
+<!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
+
+<odoo>
+
+  <data>
+
+    <record  id="plan_retirement_AFPMHAB" model="hr.plan_retirement">
+      <field name="name">AFP Habitat (Comisión mixta)</field>
+      <field name="code">AFPMHAB</field>
+    </record>
+
+    <record  id="plan_retirement_AFPMINT" model="hr.plan_retirement">
+      <field name="name">AFP Integra (Comisión mixta)</field>
+      <field name="code">AFPMINT</field>
+    </record>
+
+    <record  id="plan_retirement_AFPMPRI" model="hr.plan_retirement">
+      <field name="name">AFP Prima (Comisión mixta)</field>
+      <field name="code">AFPMPRI</field>
+    </record>
+
+    <record  id="plan_retirement_AFPMPRO" model="hr.plan_retirement">
+      <field name="name">AFP Profuturo (Comisión mixta)</field>
+      <field name="code">AFPMPRO</field>
+    </record>
+
+    <record  id="plan_retirement_AFPFHAB" model="hr.plan_retirement">
+      <field name="name">AFP Habitat (Comisión flujo)</field>
+      <field name="code">AFPFHAB</field>
+    </record>
+
+    <record  id="plan_retirement_AFPFINT" model="hr.plan_retirement">
+      <field name="name">AFP Integra (Comisión flujo)</field>
+      <field name="code">AFPFINT</field>
+    </record>
+
+    <record  id="plan_retirement_AFPFPRI" model="hr.plan_retirement">
+      <field name="name">AFP Prima (Comisión flujo)</field>
+      <field name="code">AFPFPRI</field>
+    </record>
+
+    <record  id="plan_retirement_AFPFPRO" model="hr.plan_retirement">
+      <field name="name">AFP Profuturo (Comisión flujo)</field>
+      <field name="code">AFPFPRO</field>
+    </record>
+
+    <record  id="plan_retirement_AFPMPRO" model="hr.plan_retirement">
+      <field name="name">AFP Profuturo (Comisión mixta)</field>
+      <field name="code">AFPMPRO</field>
+    </record>
+
+    <record  id="plan_retirement_AFPHAB" model="hr.plan_retirement">
+      <field name="name">AFP Habitat</field>
+      <field name="code">AFPHAB</field>
+    </record>
+
+    <record  id="plan_retirement_AFPINT" model="hr.plan_retirement">
+      <field name="name">AFP Integra</field>
+      <field name="code">AFPINT</field>
+    </record>
+
+    <record  id="plan_retirement_AFPPRI" model="hr.plan_retirement">
+      <field name="name">AFP Prima</field>
+      <field name="code">AFPPRI</field>
+    </record>
+
+    <record  id="plan_retirement_AFPPRO" model="hr.plan_retirement">
+      <field name="name">AFP Profuturo</field>
+      <field name="code">AFPPRO</field>
+    </record>
+
+    <record  id="plan_retirement_ONP" model="hr.plan_retirement">
+      <field name="name">ONP</field>
+      <field name="code">ONP</field>
+    </record>
+
+  </data>
+
+</odoo>

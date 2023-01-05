@@ -13,7 +13,3 @@ class HrPlanRetirement(models.Model):
 
     code = fields.Char(string='Code')
     name = fields.Char(string='Name')
-    onp = fields.Integer(string="Onp")
-    fund = fields.Integer(string="Fund")
-    commission = fields.Float(string="Comminssion")
-    insurance = fields.Float(string="Insurance")

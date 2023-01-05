@@ -14,10 +14,6 @@
                     <group>
                         <field name="code" />
                         <field name="name" />
-                        <field name="onp" />
-                        <field name="fund" />
-                        <field name="commission" />
-                        <field name="insurance" />
                     </group>
                 </sheet>
             </form>

@@ -14,7 +14,6 @@
                     <group>
                         <group>
                             <field name="plan_health"/>
-                            <field name="plan_health_cost"/>
                             <field name="plan_retirement"/>
                             <field name="plan_health_contribution"/>
                             <field name="plan_union"/>

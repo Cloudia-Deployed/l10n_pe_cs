@@ -52,7 +52,7 @@
       <field name="amount_percentage">0</field>
       <field name="quantity">0</field>
       <field name="amount_percentage_base">0</field>
-      <field name="amount_python_compute">result = parameter.RMV * 10%</field>
+      <field name="amount_python_compute">result = payslip.rule_parameter('RMV') * 0.1</field>
     </record>
 
     <!-- CTS -->
@@ -101,6 +101,54 @@
       <field name="quantity">0</field>
       <field name="amount_percentage_base">0</field>
       <field name="amount_python_compute">result = - payslip.sum('CTSACC',contract.date_start) + payslip.paid_amount * 7 / ( 6 * 12 )</field>
+    </record>
+
+    <!-- AFP -->
+
+    <record  id="salary_rule_AFPFOND" model="hr.salary.rule">
+      <field name="name">AFP Aporte al fondo</field>
+      <field name="code">AFPFOND</field>
+      <field name="sequence">10</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="hr_payroll.DED"/>
+      <field name="appears_on_payslip" eval="True"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <!-- Condition -->
+      <field name="condition_select">python</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python">result = contract.plan_retirement.code and contract.plan_retirement.code != 'ONP'</field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = payslip.paid_amount * 0.1</field>
+    </record>
+
+    <record  id="salary_rule_AFPCOM" model="hr.salary.rule">
+      <field name="name">AFP Comisión</field>
+      <field name="code">CTS</field>
+      <field name="sequence">10</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="hr_payroll.DED"/>
+      <field name="appears_on_payslip" eval="True"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <!-- Condition -->
+      <field name="condition_select">python</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python">result = contract.plan_retirement.code and contract.plan_retirement.code != 'ONP'</field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = payslip.rule_parameter(contract.plan_retirement.code) * payslip.paid_amount / 100</field>
     </record>
 
   </data>

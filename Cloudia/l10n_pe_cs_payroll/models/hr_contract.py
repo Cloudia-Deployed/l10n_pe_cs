@@ -13,7 +13,6 @@ class Contract(models.Model):
                     ('fullmonth','FullMonth')]
 
     plan_health = fields.Many2one('hr.plan_health', string="Health Insurance Plan")
-    plan_health_cost = fields.Float(string="Health Insurance Cost")
     plan_retirement = fields.Many2one('hr.plan_retirement',string="Retirement Plan")
     plan_health_contribution = fields.Monetary(string="Health Insurance Employer Additional Contribution")
     plan_union = fields.Many2one('hr.union_plan',string="Union dues")

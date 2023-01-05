@@ -85,7 +85,7 @@
          <!-- AFP Habitat -->
 
          <record id="parameter_afp_habitat_comision_mixta" model="hr.rule.parameter">
-           <field name="name">Comisión por mixta AFP Habitat</field>
+           <field name="name">AFP Habitat (Comisión mixta)</field>
            <field name="code">AFPMHAB</field>
            <field name="category">AFP / ONP</field>
            <field name="country_id" ref="base.pe"/>
@@ -95,20 +95,18 @@
            <field name="parameter_value">0.38</field>
            <field name="rule_parameter_id" ref="parameter_afp_habitat_comision_mixta"/>
            <field name="date_from" eval="datetime(2021, 1, 1).date()"/>
-           <!-- <field name="is_percentage">True</field> -->
          </record>
 
          <record id="afp_habitat_comision_mixta_02_2021" model="hr.rule.parameter.value">
            <field name="parameter_value">0.23</field>
            <field name="rule_parameter_id" ref="parameter_afp_habitat_comision_mixta"/>
            <field name="date_from" eval="datetime(2021, 2, 1).date()"/>
-           <!-- <field name="is_percentage">True</field> -->
          </record>
 
          <!-- AFP Integra -->
 
          <record id="parameter_afp_integra_comision_mixta" model="hr.rule.parameter">
-           <field name="name">Comisión por flujo AFP Integra</field>
+           <field name="name">AFP Integra (Comisión mixta)</field>
            <field name="code">AFPMINT</field>
            <field name="category">AFP / ONP</field>
            <field name="country_id" ref="base.pe"/>
@@ -118,13 +116,12 @@
            <field name="parameter_value">0.00</field>
            <field name="rule_parameter_id" ref="parameter_afp_integra_comision_mixta"/>
            <field name="date_from" eval="datetime(2021, 1, 1).date()"/>
-           <!-- <field name="is_percentage">True</field> -->
          </record>
 
          <!-- AFP Prima -->
 
          <record id="parameter_afp_prima_comision_mixta" model="hr.rule.parameter">
-           <field name="name">Comisión por flujo AFP Prima</field>
+           <field name="name">AFP Prima (Comisión mixta)</field>
            <field name="code">AFPMPRI</field>
            <field name="category">AFP / ONP</field>
            <field name="country_id" ref="base.pe"/>
@@ -134,13 +131,12 @@
            <field name="parameter_value">0.18</field>
            <field name="rule_parameter_id" ref="parameter_afp_prima_comision_mixta"/>
            <field name="date_from" eval="datetime(2021, 1, 1).date()"/>
-           <!-- <field name="is_percentage">True</field> -->
          </record>
 
          <!-- AFP Profuturo -->
 
          <record id="parameter_afp_profuturo_comision_mixta" model="hr.rule.parameter">
-           <field name="name">Comisión por flujo AFP Profuturo</field>
+           <field name="name">AFP Profuturo (Comisión mixta)</field>
            <field name="code">AFPMPRO</field>
            <field name="category">AFP / ONP</field>
            <field name="country_id" ref="base.pe"/>
@@ -150,14 +146,12 @@
            <field name="parameter_value">0.67</field>
            <field name="rule_parameter_id" ref="parameter_afp_profuturo_comision_mixta"/>
            <field name="date_from" eval="datetime(2021, 1, 1).date()"/>
-           <!-- <field name="is_percentage">True</field> -->
          </record>
 
          <record id="afp_profuturo_comision_mixta_02_2021" model="hr.rule.parameter.value">
            <field name="parameter_value">0.28</field>
            <field name="rule_parameter_id" ref="parameter_afp_profuturo_comision_mixta"/>
            <field name="date_from" eval="datetime(2021, 2, 1).date()"/>
-           <!-- <field name="is_percentage">True</field> -->
          </record>
 
        <!-- Comisión por flujo -->
@@ -165,8 +159,8 @@
         <!-- AFP Habitat -->
 
          <record id="parameter_afp_habitat_comision_flujo" model="hr.rule.parameter">
-           <field name="name">Comisión por flujo AFP Habitat</field>
-           <field name="code">AFPHAB</field>
+           <field name="name">AFP Habitat (Comisión flujo)</field>
+           <field name="code">AFPFHAB</field>
            <field name="category">AFP / ONP</field>
            <field name="country_id" ref="base.pe"/>
          </record>
@@ -175,14 +169,13 @@
            <field name="parameter_value">1.47</field>
            <field name="rule_parameter_id" ref="parameter_afp_habitat_comision_flujo"/>
            <field name="date_from" eval="datetime(2021, 12, 1).date()"/>
-           <!-- <field name="is_percentage">True</field> -->
          </record>
 
          <!-- AFP Integra -->
 
          <record id="parameter_afp_integra_comision_flujo" model="hr.rule.parameter">
-           <field name="name">Comisión por flujo AFP Integra</field>
-           <field name="code">AFPINT</field>
+           <field name="name">AFP Integra (Comisión flujo)</field>
+           <field name="code">AFPFINT</field>
            <field name="category">AFP / ONP</field>
            <field name="country_id" ref="base.pe"/>
          </record>
@@ -191,14 +184,13 @@
            <field name="parameter_value">1.55</field>
            <field name="rule_parameter_id" ref="parameter_afp_integra_comision_flujo"/>
            <field name="date_from" eval="datetime(2021, 12, 1).date()"/>
-           <!-- <field name="is_percentage">True</field> -->
          </record>
 
          <!-- AFP Prima -->
 
          <record id="parameter_afp_prima_comision_flujo" model="hr.rule.parameter">
-           <field name="name">Comisión por flujo AFP Prima</field>
-           <field name="code">AFPPRI</field>
+           <field name="name">AFP Prima (Comisión flujo)</field>
+           <field name="code">AFPFPRI</field>
            <field name="category">AFP / ONP</field>
            <field name="country_id" ref="base.pe"/>
          </record>
@@ -207,14 +199,13 @@
            <field name="parameter_value">1.60</field>
            <field name="rule_parameter_id" ref="parameter_afp_prima_comision_flujo"/>
            <field name="date_from" eval="datetime(2021, 12, 1).date()"/>
-           <!-- <field name="is_percentage">True</field> -->
          </record>
 
          <!-- AFP Profuturo -->
 
          <record id="parameter_afp_profuturo_comision_flujo" model="hr.rule.parameter">
-           <field name="name">Comisión por flujo AFP Profuturo</field>
-           <field name="code">AFPPRO</field>
+           <field name="name">AFP Profuturo (Comisión flujo)</field>
+           <field name="code">AFPFPRO</field>
            <field name="category">AFP / ONP</field>
            <field name="country_id" ref="base.pe"/>
          </record>
@@ -223,8 +214,69 @@
            <field name="parameter_value">1.69</field>
            <field name="rule_parameter_id" ref="parameter_afp_profuturo_comision_flujo"/>
            <field name="date_from" eval="datetime(2021, 12, 1).date()"/>
-           <!-- <field name="is_percentage">True</field> -->
          </record>
+
+       <!-- Comisión por Saldo -->
+
+          <!-- AFP Habitat -->
+
+           <record id="parameter_afp_habitat_comision_flujo" model="hr.rule.parameter">
+             <field name="name">AFP Habitat</field>
+             <field name="code">AFPHAB</field>
+             <field name="category">AFP / ONP</field>
+             <field name="country_id" ref="base.pe"/>
+           </record>
+
+           <record id="afp_habitat_comision_flujo_01_2021" model="hr.rule.parameter.value">
+             <field name="parameter_value">0</field>
+             <field name="rule_parameter_id" ref="parameter_afp_habitat_comision_flujo"/>
+             <field name="date_from" eval="datetime(2021, 12, 1).date()"/>
+           </record>
+
+           <!-- AFP Integra -->
+
+           <record id="parameter_afp_integra_comision_flujo" model="hr.rule.parameter">
+             <field name="name">AFP Integra</field>
+             <field name="code">AFPINT</field>
+             <field name="category">AFP / ONP</field>
+             <field name="country_id" ref="base.pe"/>
+           </record>
+
+           <record id="afp_integra_comision_flujo_01_2021" model="hr.rule.parameter.value">
+             <field name="parameter_value">0</field>
+             <field name="rule_parameter_id" ref="parameter_afp_integra_comision_flujo"/>
+             <field name="date_from" eval="datetime(2021, 12, 1).date()"/>
+           </record>
+
+           <!-- AFP Prima -->
+
+           <record id="parameter_afp_prima_comision_flujo" model="hr.rule.parameter">
+             <field name="name">AFP Prima</field>
+             <field name="code">AFPPRI</field>
+             <field name="category">AFP / ONP</field>
+             <field name="country_id" ref="base.pe"/>
+           </record>
+
+           <record id="afp_prima_comision_flujo_01_2021" model="hr.rule.parameter.value">
+             <field name="parameter_value">0</field>
+             <field name="rule_parameter_id" ref="parameter_afp_prima_comision_flujo"/>
+             <field name="date_from" eval="datetime(2021, 12, 1).date()"/>
+           </record>
+
+           <!-- AFP Profuturo -->
+
+           <record id="parameter_afp_profuturo_comision_flujo" model="hr.rule.parameter">
+             <field name="name">AFP Profuturo</field>
+             <field name="code">AFPPRO</field>
+             <field name="category">AFP / ONP</field>
+             <field name="country_id" ref="base.pe"/>
+           </record>
+
+           <record id="afp_profuturo_comision_flujo_01_2021" model="hr.rule.parameter.value">
+             <field name="parameter_value">0</field>
+             <field name="rule_parameter_id" ref="parameter_afp_profuturo_comision_flujo"/>
+             <field name="date_from" eval="datetime(2021, 12, 1).date()"/>
+           </record>
 
        <!-- AFP Common parameters -->
 
@@ -239,21 +291,6 @@
          <field name="parameter_value">1.74</field>
          <field name="rule_parameter_id" ref="parameter_afp_seguro"/>
          <field name="date_from" eval="datetime(2021, 1, 1).date()"/>
-         <!-- <field name="is_percentage">True</field> -->
-       </record>
-
-       <record id="parameter_afp_deposit" model="hr.rule.parameter">
-         <field name="name">Aporte al fondo AFP</field>
-         <field name="code">AFPDEP</field>
-         <field name="category">AFP / ONP</field>
-         <field name="country_id" ref="base.pe"/>
-       </record>
-
-       <record id="afp_fondo_01_2020" model="hr.rule.parameter.value">
-         <field name="parameter_value">10</field>
-         <field name="rule_parameter_id" ref="parameter_afp_deposit"/>
-         <field name="date_from" eval="datetime(2020, 1, 1).date()"/>
-         <!-- <field name="is_percentage">True</field> -->
        </record>
 
        <!-- ONP -->
@@ -269,7 +306,6 @@
          <field name="parameter_value">13</field>
          <field name="rule_parameter_id" ref="parameter_onp_rate"/>
          <field name="date_from" eval="datetime(2020, 1, 1).date()"/>
-         <!-- <field name="is_percentage">True</field> -->
        </record>
 
    </data>
