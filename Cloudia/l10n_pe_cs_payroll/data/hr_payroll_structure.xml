@@ -5,7 +5,7 @@
 
 <odoo>
 
-  <data>
+  <data noupdate="1">
 
     <record  id="structure_general" model="hr.payroll.structure">
       <field name="name">Peru General Structure</field>

@@ -24,7 +24,7 @@
   'data'                 :  [
                                 # Data
                                 'data/account_journal_data.xml',
-                                #'data/account_account_data.xml',
+                                'data/account_account_data.xml',
                                 'data/hr_rule_parameter_data.xml',
                                 'data/hr_payroll_structure_type_data.xml',
                                 'data/hr_salary_rule_category_data.xml',
@@ -33,6 +33,7 @@
                                 'data/hr_payroll_structure.xml',
                                 'data/hr_salary_rule.xml',
                                 'data/hr_plan_retirement.xml',
+                                'data/ir_filters_data.xml'
 
                                 # Views
                                 'views/hr_contract_view.xml',

@@ -45,7 +45,7 @@
       <field name="condition_range">0</field>
       <field name="condition_range_max">0</field>
       <field name="condition_range_min">0</field>
-      <field name="condition_python">result = if employee.children > 0</field>
+      <field name="condition_python">result = employee.children > 0</field>
       <!-- Calculation -->
       <field name="amount_select">code</field>
       <field name="amount_fix">0</field>
