@@ -4,7 +4,9 @@
 <!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
 
 <odoo>
-  <data>
+
+  <data noupdate="1">
+
     <record  id="hr_payroll_account_journal" model="account.journal">
       <field name="sequence">99</field>
       <field name="name">Sueldos y Salarios</field>
@@ -14,5 +16,7 @@
       <field name="default_account_id" ref=""/>
       <field name="show_on_dashboard" eval="False"/>
     </record>
+
   </data>
+
 </odoo>
