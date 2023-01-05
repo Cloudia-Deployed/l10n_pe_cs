@@ -27,10 +27,6 @@
             <tree string="HR Plan Retirement">
                 <field name="code" />
                 <field name="name" />
-                <field name="onp" />
-                <field name="fund" />
-                <field name="commission" />
-                <field name="insurance" />
             </tree>
         </field>
     </record>
