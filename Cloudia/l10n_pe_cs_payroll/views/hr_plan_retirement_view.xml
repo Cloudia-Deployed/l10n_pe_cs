@@ -32,7 +32,7 @@
     </record>
 
     <record id="action_hr_plan_retirement" model="ir.actions.act_window">
-        <field name="name">HR Plan Retirement</field>
+        <field name="name">Plan Retirement</field>
         <field name="res_model">hr.plan_retirement</field>
         <field name="view_mode">tree,form</field>
     </record>
