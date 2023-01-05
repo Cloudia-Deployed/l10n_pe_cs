@@ -15,7 +15,7 @@
       <field name="currency_id" ref="base.PEN"/>
       <field name="allowed_journal_ids" ref="hr_payroll_account_journal"/>
       <field name="deprecated" eval="False"/>
-      <field name="user_type_id" ref="Account.Data_Account_Type_Payable"/>
+      <field name="user_type_id" ref="account.data_account_type_payable"/>
     </record>
 
     <record  id="chart4172" model="account.account.template">
@@ -26,7 +26,7 @@
       <field name="currency_id" ref="base.PEN"/>
       <field name="allowed_journal_ids" ref="hr_payroll_account_journal"/>
       <field name="deprecated" eval="False"/>
-      <field name="user_type_id" ref="Account.Data_Account_Type_Payable"/>
+      <field name="user_type_id" ref="account.data_account_type_payable"/>
     </record>
 
     <record  id="chart4173" model="account.account.template">
@@ -37,7 +37,7 @@
       <field name="currency_id" ref="base.PEN"/>
       <field name="allowed_journal_ids" ref="hr_payroll_account_journal"/>
       <field name="deprecated" eval="False"/>
-      <field name="user_type_id" ref="Account.Data_Account_Type_Payable"/>
+      <field name="user_type_id" ref="account.data_account_type_payable"/>
     </record>
 
     <record  id="chart4174" model="account.account.template">
@@ -48,7 +48,7 @@
       <field name="currency_id" ref="base.PEN"/>
       <field name="allowed_journal_ids" ref="hr_payroll_account_journal"/>
       <field name="deprecated" eval="False"/>
-      <field name="user_type_id" ref="Account.Data_Account_Type_Payable"/>
+      <field name="user_type_id" ref="account.data_account_type_payable"/>
     </record>
 
   </data>
