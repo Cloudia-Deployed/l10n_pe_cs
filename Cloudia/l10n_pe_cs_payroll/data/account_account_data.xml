@@ -12,7 +12,7 @@
       <field name="code">4171000</field>
       <field name="user_type_id" ref="account.data_account_type_payable"/>
       <field name="reconcile" eval="True"/>
-      <field name="currency_id">base.PEN</field>
+      <field name="currency_id" ref="base.PEN"/>
       <field name="allowed_journal_ids" ref="hr_payroll_account_journal"/>
       <field name="deprecated" eval="False"/>
       <field name="user_type_id" ref="Account.Data_Account_Type_Payable"/>
@@ -23,7 +23,7 @@
       <field name="code">4172000</field>
       <field name="user_type_id" ref="account.data_account_type_payable"/>
       <field name="reconcile" eval="True"/>
-      <field name="currency_id">base.PEN</field>
+      <field name="currency_id" ref="base.PEN"/>
       <field name="allowed_journal_ids" ref="hr_payroll_account_journal"/>
       <field name="deprecated" eval="False"/>
       <field name="user_type_id" ref="Account.Data_Account_Type_Payable"/>
@@ -34,7 +34,7 @@
       <field name="code">4173000</field>
       <field name="user_type_id" ref="account.data_account_type_payable"/>
       <field name="reconcile" eval="True"/>
-      <field name="currency_id">base.PEN</field>
+      <field name="currency_id" ref="base.PEN"/>
       <field name="allowed_journal_ids" ref="hr_payroll_account_journal"/>
       <field name="deprecated" eval="False"/>
       <field name="user_type_id" ref="Account.Data_Account_Type_Payable"/>
@@ -45,7 +45,7 @@
       <field name="code">4174000</field>
       <field name="user_type_id" ref="account.data_account_type_payable"/>
       <field name="reconcile" eval="True"/>
-      <field name="currency_id">base.PEN</field>
+      <field name="currency_id" ref="base.PEN"/>
       <field name="allowed_journal_ids" ref="hr_payroll_account_journal"/>
       <field name="deprecated" eval="False"/>
       <field name="user_type_id" ref="Account.Data_Account_Type_Payable"/>
