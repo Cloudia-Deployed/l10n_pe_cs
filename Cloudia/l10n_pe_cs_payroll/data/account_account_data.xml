@@ -10,7 +10,7 @@
     <record  id="chart4171" model="account.account.template">
       <field name="name">AFP Integra</field>
       <field name="code">4171000</field>
-      <field name="user_type_id" ref="l10n_pe.liability_payable"/>
+      <field name="user_type_id" ref="account.data_account_type_payable"/>
       <field name="reconcile" eval="True"/>
       <field name="currency_id">base.PEN</field>
       <field name="allowed_journal_ids" ref="hr_payroll_account_journal"/>
@@ -21,7 +21,7 @@
     <record  id="chart4172" model="account.account.template">
       <field name="name">AFP Prima</field>
       <field name="code">4172000</field>
-      <field name="user_type_id" ref="l10n_pe.liability_payable"/>
+      <field name="user_type_id" ref="account.data_account_type_payable"/>
       <field name="reconcile" eval="True"/>
       <field name="currency_id">base.PEN</field>
       <field name="allowed_journal_ids" ref="hr_payroll_account_journal"/>
@@ -32,7 +32,7 @@
     <record  id="chart4173" model="account.account.template">
       <field name="name">AFP Profuturo</field>
       <field name="code">4173000</field>
-      <field name="user_type_id" ref="l10n_pe.liability_payable"/>
+      <field name="user_type_id" ref="account.data_account_type_payable"/>
       <field name="reconcile" eval="True"/>
       <field name="currency_id">base.PEN</field>
       <field name="allowed_journal_ids" ref="hr_payroll_account_journal"/>
@@ -43,7 +43,7 @@
     <record  id="chart4174" model="account.account.template">
       <field name="name">AFP Habitat</field>
       <field name="code">4174000</field>
-      <field name="user_type_id" ref="l10n_pe.liability_payable"/>
+      <field name="user_type_id" ref="account.data_account_type_payable"/>
       <field name="reconcile" eval="True"/>
       <field name="currency_id">base.PEN</field>
       <field name="allowed_journal_ids" ref="hr_payroll_account_journal"/>
