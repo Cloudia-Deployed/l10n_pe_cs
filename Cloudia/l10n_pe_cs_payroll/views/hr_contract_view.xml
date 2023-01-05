@@ -20,10 +20,9 @@
                         </group>
                         <group>
                             <field name="sctr"/>
-                            <field name="previous_income"/>
-                            <field name="plan_union"/>
                             <field name="commisions"/>
                             <field name="attendance_tracking"/>
+                            <field name="previous_income"/>
                         </group>
                     </group>
                 </page>

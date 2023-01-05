@@ -220,7 +220,7 @@
 
           <!-- AFP Habitat -->
 
-           <record id="parameter_afp_habitat_comision_flujo" model="hr.rule.parameter">
+           <record id="parameter_afp_habitat_comision_saldo" model="hr.rule.parameter">
              <field name="name">AFP Habitat</field>
              <field name="code">AFPHAB</field>
              <field name="category">AFP / ONP</field>
@@ -235,7 +235,7 @@
 
            <!-- AFP Integra -->
 
-           <record id="parameter_afp_integra_comision_flujo" model="hr.rule.parameter">
+           <record id="parameter_afp_integra_comision_saldo" model="hr.rule.parameter">
              <field name="name">AFP Integra</field>
              <field name="code">AFPINT</field>
              <field name="category">AFP / ONP</field>
@@ -250,7 +250,7 @@
 
            <!-- AFP Prima -->
 
-           <record id="parameter_afp_prima_comision_flujo" model="hr.rule.parameter">
+           <record id="parameter_afp_prima_comision_saldo" model="hr.rule.parameter">
              <field name="name">AFP Prima</field>
              <field name="code">AFPPRI</field>
              <field name="category">AFP / ONP</field>
@@ -265,7 +265,7 @@
 
            <!-- AFP Profuturo -->
 
-           <record id="parameter_afp_profuturo_comision_flujo" model="hr.rule.parameter">
+           <record id="parameter_afp_profuturo_comision_saldo" model="hr.rule.parameter">
              <field name="name">AFP Profuturo</field>
              <field name="code">AFPPRO</field>
              <field name="category">AFP / ONP</field>
