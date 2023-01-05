@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo - Module Developed by Cloudia Systems S.A.C. | http://cloudia.systems | <info@cloudia.systems> -->
+<!-- Copyright (c) 2021-Present Cloudia Systems S.A.C. -->
+<!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
+
+<odoo>
+
+  <data>
+
+    <record  id="plan_health_ESSALUD" model="hr.plan_retirement">
+      <field name="name">EsSalud</field>
+      <field name="code">ESSALUD</field>
+      <field name="price">0</field>
+    </record>
+
+    <record  id="plan_health_EPS1" model="hr.plan_retirement">
+      <field name="name">EPS Plan 1</field>
+      <field name="code">EPS1</field>
+      <field name="price">0</field>
+    </record>
+
+    <record  id="plan_health_EPS2" model="hr.plan_retirement">
+      <field name="name">EPS Plan 2</field>
+      <field name="code">EPS2</field>
+      <field name="price">0</field>
+    </record>
+
+    <record  id="plan_health_EPS3" model="hr.plan_retirement">
+      <field name="name">EPS Plan 3</field>
+      <field name="code">EPS3</field>
+      <field name="price">0</field>
+    </record>
+
+  </data>
+
+</odoo>

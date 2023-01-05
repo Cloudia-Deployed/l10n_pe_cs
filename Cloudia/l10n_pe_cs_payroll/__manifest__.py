@@ -33,6 +33,7 @@
                                 'data/hr_payroll_structure.xml',
                                 'data/hr_salary_rule.xml',
                                 'data/hr_plan_retirement.xml',
+                                'data/hr_plan_health.xml',
                                 'data/ir_filters_data.xml'
 
                                 # Views
