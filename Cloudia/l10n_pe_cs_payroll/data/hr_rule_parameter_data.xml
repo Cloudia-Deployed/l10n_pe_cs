@@ -123,7 +123,7 @@
        <field name="country_id" ref="base.pe"/>
      </record>
 
-     <record id="vidaley_2022_01" model="hr.rule.parameter.value">
+     <record id="vidagrupo_2022_01" model="hr.rule.parameter.value">
        <field name="parameter_value">15</field>
        <field name="rule_parameter_id" ref="parameter_VIDAGRUPO"/>
        <field name="date_from" eval="datetime(2022, 1, 1).date()"/>
@@ -136,7 +136,7 @@
        <field name="country_id" ref="base.pe"/>
      </record>
 
-     <record id="vidaley_2022_01" model="hr.rule.parameter.value">
+     <record id="masvida_2022_01" model="hr.rule.parameter.value">
        <field name="parameter_value">15</field>
        <field name="rule_parameter_id" ref="parameter_MASVIDA"/>
        <field name="date_from" eval="datetime(2022, 1, 1).date()"/>
