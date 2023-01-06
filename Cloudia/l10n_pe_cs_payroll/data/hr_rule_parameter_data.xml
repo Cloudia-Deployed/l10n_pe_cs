@@ -118,7 +118,7 @@
 
      <record id="parameter_VIDAGRUPO" model="hr.rule.parameter">
        <field name="name">Seguro Vida Grupo</field>
-       <field name="code">VIDALEY</field>
+       <field name="code">VIDAGRUPO</field>
        <field name="category">Seguros</field>
        <field name="country_id" ref="base.pe"/>
      </record>
@@ -131,7 +131,7 @@
 
      <record id="parameter_MASVIDA" model="hr.rule.parameter">
        <field name="name">Seguro Más Vida</field>
-       <field name="code">VIDALEY</field>
+       <field name="code">MASVIDA</field>
        <field name="category">Seguros</field>
        <field name="country_id" ref="base.pe"/>
      </record>
