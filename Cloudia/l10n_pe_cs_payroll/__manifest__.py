@@ -34,15 +34,17 @@
                                 'data/hr_salary_rule.xml',
                                 'data/hr_plan_retirement.xml',
                                 'data/hr_plan_health.xml',
+                                'data/hr_plan_sctr.xml',
                                 'data/ir_filters_data.xml',
 
                                 # Views
                                 'views/hr_contract_view.xml',
                                 #'views/hr_payslip_view.xml',
+                                'views/hr_rule_parameter_view.xml',
                                 'views/hr_plan_health_view.xml',
                                 'views/hr_plan_life_view.xml',
                                 'views/hr_plan_retirement_view.xml',
-                                'views/hr_rule_parameter_view.xml',
+                                'views/hr_plan_sctr_view.xml',
                                 'views/hr_union_plan_view.xml',
 
                                 #Security

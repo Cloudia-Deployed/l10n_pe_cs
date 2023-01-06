@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo - Module Developed by Cloudia Systems S.A.C. | http://cloudia.systems | <info@cloudia.systems> -->
+<!-- Copyright (c) 2021-Present Cloudia Systems S.A.C. -->
+<!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
+
+<odoo>
+
+  <data>
+
+    <record  id="plan_life_VIDALEY" model="hr.plan_life">
+      <field name="name">Seguro Vida Ley</field>
+      <field name="code">VIDALEY</field>
+    </record>
+
+    <record  id="plan_life_VIDAGRUPO" model="hr.plan_life">
+      <field name="name">Seguro Vida Grupo</field>
+      <field name="code">VIDAGRUPO</field>
+    </record>
+
+    <record  id="plan_life_MASSALUD" model="hr.plan_life">
+      <field name="name">Seguro Más Salud</field>
+      <field name="code">MASSALUD</field>
+    </record>
+
+  </data>
+
+</odoo>

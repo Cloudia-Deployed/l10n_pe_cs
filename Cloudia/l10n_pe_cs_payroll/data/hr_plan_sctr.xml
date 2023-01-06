@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo - Module Developed by Cloudia Systems S.A.C. | http://cloudia.systems | <info@cloudia.systems> -->
+<!-- Copyright (c) 2021-Present Cloudia Systems S.A.C. -->
+<!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
+
+<odoo>
+
+  <data>
+
+    <record  id="plan_sctr_BAJO" model="hr.plan_sctr">
+      <field name="name">SCTR Bajo Riesgo</field>
+      <field name="code">SCTRBAJO</field>
+    </record>
+
+    <record  id="plan_sctr_MEDIO" model="hr.plan_sctr">
+      <field name="name">SCTR Medio Riesgo</field>
+      <field name="code">SCTRMEDIO</field>
+    </record>
+
+    <record  id="plan_sctr_ALTO" model="hr.plan_sctr">
+      <field name="name">SCTR Alto Riesgo</field>
+      <field name="code">SCTRALTO</field>
+    </record>
+
+  </data>
+
+</odoo>

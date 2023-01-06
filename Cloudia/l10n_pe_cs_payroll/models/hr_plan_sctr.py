@@ -6,9 +6,9 @@
 from odoo import models,fields
 
 
-class HrPlanLife(models.Model):
-    _name = 'hr.plan_life'
-    _description = 'HR Plan Life'
+class HrPlanSCTR(models.Model):
+    _name = 'hr.plan_SCTR'
+    _description = 'HR Plan SCTR'
 
     code = fields.Char(string='Code')
     name = fields.Char(string='Name')

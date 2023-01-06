@@ -10,25 +10,21 @@
     <record  id="plan_health_ESSALUD" model="hr.plan_health">
       <field name="name">EsSalud</field>
       <field name="code">ESSALUD</field>
-      <field name="price">0</field>
     </record>
 
     <record  id="plan_health_EPS1" model="hr.plan_health">
       <field name="name">EPS Plan 1</field>
       <field name="code">EPS1</field>
-      <field name="price">0</field>
     </record>
 
     <record  id="plan_health_EPS2" model="hr.plan_health">
       <field name="name">EPS Plan 2</field>
       <field name="code">EPS2</field>
-      <field name="price">0</field>
     </record>
 
     <record  id="plan_health_EPS3" model="hr.plan_health">
       <field name="name">EPS Plan 3</field>
       <field name="code">EPS3</field>
-      <field name="price">0</field>
     </record>
 
   </data>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo - Module Developed by Cloudia Systems S.A.C. | http://cloudia.systems | <info@cloudia.systems> -->
+<!-- Copyright (c) 2021-Present Cloudia Systems S.A.C. -->
+<!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
+
+<odoo>
+
+    <record id="hr_plan_sctr_view_form" model="ir.ui.view">
+        <field name="name">hr.plan_sctr.view.form</field>
+        <field name="model">hr.plan_sctr</field>
+        <field name="arch" type="xml">
+            <form string="HR Plan SCTR">
+                <sheet>
+                    <group>
+                        <field name="code" />
+                        <field name="name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_plan_sctr_view_tree" model="ir.ui.view">
+        <field name="name">hr.plan_sctr.view.tree</field>
+        <field name="model">hr.plan_sctr</field>
+        <field name="arch" type="xml">
+            <tree string="HR Plan SCTR">
+                <field name="code" />
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hr_plan_sctr" model="ir.actions.act_window">
+        <field name="name">HR Plan SCTR</field>
+        <field name="res_model">hr.plan_sctr</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="hr_plan_sctr_menu" name="HR Plan sctr" parent="hr_config_peru" action="action_hr_plan_sctr"/>
+
+</odoo>
