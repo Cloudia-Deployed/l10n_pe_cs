@@ -66,9 +66,9 @@
       <field name="appears_on_payslip" eval="False"/>
       <field name="not_computed_in_net" eval="True"/>
       <field name="account_debit" model="account.account"
-        eval="ref('l10n_pe.(0)_chart6291'.format(obj().env.user.company_id.id))"/>
+        eval="ref('l10n_pe.{0}_chart6291'.format(obj().env.user.company_id.id))"/>
       <field name="account_credit" model="account.account"
-        eval="ref('l10n_pe.(0)_chart4151'.format(obj().env.user.company_id.id))"/>
+        eval="ref('l10n_pe.{0}_chart4151'.format(obj().env.user.company_id.id))"/>
       <!-- Condition -->
       <field name="condition_select">none</field>
       <field name="condition_range">0</field>
@@ -118,9 +118,9 @@
       <field name="appears_on_payslip" eval="False"/>
       <field name="not_computed_in_net" eval="True"/>
       <field name="account_debit" model="account.account"
-        eval="ref('l10n_pe.(0)_chart6211'.format(obj().env.user.company_id.id))"/>
+        eval="ref('l10n_pe.{0}_chart6211'.format(obj().env.user.company_id.id))"/>
       <field name="account_credit" model="account.account"
-        eval="ref('l10n_pe.(0)_chart4111'.format(obj().env.user.company_id.id))"/>
+        eval="ref('l10n_pe.{0}_chart4111'.format(obj().env.user.company_id.id))"/>
       <!-- Condition -->
       <field name="condition_select">none</field>
       <field name="condition_range">0</field>
@@ -170,9 +170,9 @@
       <field name="appears_on_payslip" eval="True"/>
       <field name="not_computed_in_net" eval="False"/>
       <field name="account_debit" model="account.account"
-        eval="ref('l10n_pe.(0)_chart6291'.format(obj().env.user.company_id.id))"/>
+        eval="ref('l10n_pe.{0}_chart6291'.format(obj().env.user.company_id.id))"/>
       <field name="account_credit" model="account.account"
-        eval="ref('l10n_pe.(0)_chart4151'.format(obj().env.user.company_id.id))"/>
+        eval="ref('l10n_pe.{0}_chart4151'.format(obj().env.user.company_id.id))"/>
       <!-- Condition -->
       <field name="condition_select">python</field>
       <field name="condition_range">0</field>
