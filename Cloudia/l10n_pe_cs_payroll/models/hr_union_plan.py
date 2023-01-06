@@ -10,5 +10,5 @@ class HRUnionPlan(models.Model):
     _name = 'hr.union_plan'
     _description = 'Union Plan'
 
-    name = fields.Char(string="Name")
-    fees = fields.Integer(string="Fees")
+    code = fields.Char(string='Code')
+    name = fields.Char(string='Name')

@@ -9,11 +9,12 @@
 
     <record  id="hr_payroll_account_journal" model="account.journal">
       <field name="sequence">99</field>
-      <field name="name">Sueldos y Salarios</field>
+      <field name="name">Remuneraciones</field>
       <field name="type">general</field>
       <field name="code">SLR</field>
       <field name="currency_id" ref="base.PEN"/>
-      <field name="default_account_id" ref=""/>
+      <field name="default_account_id" model="account.account"
+        eval="ref('l10n_pe.(0)_chart4111'.format(obj().env.user.company_id.id))"/>
       <field name="show_on_dashboard" eval="False"/>
     </record>
 

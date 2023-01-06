@@ -12,8 +12,3 @@ class HrPlanHealth(models.Model):
 
     code = fields.Char(string='Code')
     name = fields.Char(string='Name')
-    price = fields.Monetary(string='Price')
-    currency_id = fields.Many2one(
-        'res.currency', 'Currency',
-        default=lambda self: self.env.company.currency_id.id,
-        required=True)

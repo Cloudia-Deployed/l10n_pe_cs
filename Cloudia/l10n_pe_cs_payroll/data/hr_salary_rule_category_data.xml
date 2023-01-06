@@ -50,9 +50,9 @@
         <field name="note"></field>
     </record>
 
-    <record  id="RBN" model="hr.salary.rule.category">
+    <record  id="BONUS" model="hr.salary.rule.category">
         <field name="name">Regular Bonus Pay</field>
-        <field name="code">RBN</field>
+        <field name="code">BONUS</field>
         <field name="parent_id" ref="ACC"/>
         <field name="note"></field>
     </record>

@@ -65,6 +65,62 @@
       <field name="category_id" ref="CTS"/>
       <field name="appears_on_payslip" eval="False"/>
       <field name="not_computed_in_net" eval="True"/>
+      <field name="account_debit" model="account.account"
+        eval="ref('l10n_pe.(0)_chart6291'.format(obj().env.user.company_id.id))"/>
+      <field name="account_credit" model="account.account"
+        eval="ref('l10n_pe.(0)_chart4151'.format(obj().env.user.company_id.id))"/>
+      <!-- Condition -->
+      <field name="condition_select">none</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python"></field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = - payslip.paid_amount * 7 / ( 6 * 12 )</field>
+    </record>
+
+    <record  id="salary_rule_CTS" model="hr.salary.rule">
+      <field name="name">CTS Payment</field>
+      <field name="code">CTS</field>
+      <field name="sequence">10</field>
+      <field name="struct_id" ref="structure_cts"/>
+      <field name="category_id" ref="CTS"/>
+      <field name="appears_on_payslip" eval="True"/>
+      <field name="not_computed_in_net" eval="True"/>
+      <!-- Condition -->
+      <field name="condition_select">python</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python">result = payslip.date_from.month in [5, 11]</field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = - payslip.sum('CTSACC',contract.date_start) + payslip.paid_amount * 7 / ( 6 * 12 )</field>
+    </record>
+
+    <!-- Bonus pay -->
+
+    <record  id="salary_rule_BONUS" model="hr.salary.rule">
+      <field name="name">Bonus</field>
+      <field name="code">BONUS</field>
+      <field name="sequence">10</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="BONUS"/>
+      <field name="appears_on_payslip" eval="False"/>
+      <field name="not_computed_in_net" eval="True"/>
+      <field name="account_debit" model="account.account"
+        eval="ref('l10n_pe.(0)_chart6211'.format(obj().env.user.company_id.id))"/>
+      <field name="account_credit" model="account.account"
+        eval="ref('l10n_pe.(0)_chart4111'.format(obj().env.user.company_id.id))"/>
       <!-- Condition -->
       <field name="condition_select">none</field>
       <field name="condition_range">0</field>
@@ -105,14 +161,18 @@
 
     <!-- AFP / ONP -->
 
-    <record  id="salary_rule_AFPFOND" model="hr.salary.rule">
+    <record  id="salary_rule_AFPFONP" model="hr.salary.rule">
       <field name="name">AFP Aporte al fondo</field>
-      <field name="code">AFPFOND</field>
+      <field name="code">AFPFONP</field>
       <field name="sequence">10</field>
       <field name="struct_id" ref="structure_general"/>
       <field name="category_id" ref="hr_payroll.DED"/>
       <field name="appears_on_payslip" eval="True"/>
       <field name="not_computed_in_net" eval="False"/>
+      <field name="account_debit" model="account.account"
+        eval="ref('l10n_pe.(0)_chart6291'.format(obj().env.user.company_id.id))"/>
+      <field name="account_credit" model="account.account"
+        eval="ref('l10n_pe.(0)_chart4151'.format(obj().env.user.company_id.id))"/>
       <!-- Condition -->
       <field name="condition_select">python</field>
       <field name="condition_range">0</field>
