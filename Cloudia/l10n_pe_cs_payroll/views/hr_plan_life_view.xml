@@ -14,7 +14,6 @@
                     <group>
                         <field name="code" />
                         <field name="name" />
-                        <field name="cost" />
                     </group>
                 </sheet>
             </form>
@@ -28,7 +27,6 @@
             <tree string="HR Plan Life">
                 <field name="code" />
                 <field name="name" />
-                <field name="cost" />
             </tree>
         </field>
     </record>

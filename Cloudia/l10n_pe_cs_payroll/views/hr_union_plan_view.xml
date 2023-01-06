@@ -12,8 +12,8 @@
             <form string="HR Union Plan">
                 <sheet>
                     <group>
-                        <field name="name" />
-                        <field name="fees" />
+                      <field name="code" />
+                      <field name="name" />
                     </group>
                 </sheet>
             </form>
@@ -25,8 +25,8 @@
         <field name="model">hr.union_plan</field>
         <field name="arch" type="xml">
             <tree string="HR Union Plan">
-                <field name="name" />
-                <field name="fees" />
+              <field name="code" />
+              <field name="name" />
             </tree>
         </field>
     </record>
