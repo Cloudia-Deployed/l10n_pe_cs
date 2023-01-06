@@ -16,10 +16,10 @@
                             <field name="plan_health"/>
                             <field name="plan_retirement"/>
                             <field name="plan_health_contribution"/>
+                            <field name="plan_sctr"/>
                             <field name="plan_union"/>
                         </group>
                         <group>
-                            <field name="sctr"/>
                             <field name="commisions"/>
                             <field name="attendance_tracking"/>
                             <field name="previous_income"/>
