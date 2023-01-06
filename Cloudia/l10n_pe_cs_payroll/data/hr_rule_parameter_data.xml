@@ -112,12 +112,12 @@
 
      <record id="vidaley_2022_01" model="hr.rule.parameter.value">
        <field name="parameter_value">15</field>
-       <field name="rule_parameter_id" ref="parameter_life"/>
+       <field name="rule_parameter_id" ref="parameter_VIDALEY"/>
        <field name="date_from" eval="datetime(2022, 1, 1).date()"/>
      </record>
 
      <record id="parameter_VIDAGRUPO" model="hr.rule.parameter">
-       <field name="name">Seguro Vida Ley</field>
+       <field name="name">Seguro Vida Grupo</field>
        <field name="code">VIDALEY</field>
        <field name="category">Seguros</field>
        <field name="country_id" ref="base.pe"/>
@@ -125,12 +125,12 @@
 
      <record id="vidaley_2022_01" model="hr.rule.parameter.value">
        <field name="parameter_value">15</field>
-       <field name="rule_parameter_id" ref="parameter_life"/>
+       <field name="rule_parameter_id" ref="parameter_VIDAGRUPO"/>
        <field name="date_from" eval="datetime(2022, 1, 1).date()"/>
      </record>
 
-     <record id="parameter_VIDALEY" model="hr.rule.parameter">
-       <field name="name">Seguro Vida Ley</field>
+     <record id="parameter_MASVIDA" model="hr.rule.parameter">
+       <field name="name">Seguro Más Vida</field>
        <field name="code">VIDALEY</field>
        <field name="category">Seguros</field>
        <field name="country_id" ref="base.pe"/>
@@ -138,7 +138,7 @@
 
      <record id="vidaley_2022_01" model="hr.rule.parameter.value">
        <field name="parameter_value">15</field>
-       <field name="rule_parameter_id" ref="parameter_life"/>
+       <field name="rule_parameter_id" ref="parameter_MASVIDA"/>
        <field name="date_from" eval="datetime(2022, 1, 1).date()"/>
      </record>
 
