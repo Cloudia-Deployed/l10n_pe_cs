@@ -7,7 +7,7 @@ from odoo import models,fields
 
 
 class HrPlanSCTR(models.Model):
-    _name = 'hr.plan_SCTR'
+    _name = 'hr.plan_sctr'
     _description = 'HR Plan SCTR'
 
     code = fields.Char(string='Code')
