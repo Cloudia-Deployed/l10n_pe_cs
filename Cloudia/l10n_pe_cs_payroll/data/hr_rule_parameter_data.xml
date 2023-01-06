@@ -66,7 +66,7 @@
 
      <record id="parameter_sctr1" model="hr.rule.parameter">
        <field name="name">SCTR Bajo Riesgo</field>
-       <field name="code">SCTR1</field>
+       <field name="code">SCTRBAJO</field>
        <field name="category">SCTR</field>
        <field name="country_id" ref="base.pe"/>
      </record>
@@ -79,7 +79,7 @@
 
      <record id="parameter_sctr2" model="hr.rule.parameter">
        <field name="name">SCTR Mediano Riesgo</field>
-       <field name="code">SCTR2</field>
+       <field name="code">SCTRMEDIO</field>
        <field name="category">SCTR</field>
        <field name="country_id" ref="base.pe"/>
      </record>
@@ -92,7 +92,7 @@
 
      <record id="parameter_sctr3" model="hr.rule.parameter">
        <field name="name">SCTR Alto Riesgo</field>
-       <field name="code">SCTR3</field>
+       <field name="code">SCTRALTO</field>
        <field name="category">SCTR</field>
        <field name="country_id" ref="base.pe"/>
      </record>
@@ -103,15 +103,41 @@
        <field name="date_from" eval="datetime(2022, 1, 1).date()"/>
      </record>
 
-     <record id="parameter_life" model="hr.rule.parameter">
+     <record id="parameter_VIDALEY" model="hr.rule.parameter">
        <field name="name">Seguro Vida Ley</field>
-       <field name="code">LIFE</field>
-       <field name="category">Datos de contratos</field>
+       <field name="code">VIDALEY</field>
+       <field name="category">Seguros</field>
        <field name="country_id" ref="base.pe"/>
      </record>
 
-     <record id="life_2022_01" model="hr.rule.parameter.value">
-       <field name="parameter_value">80</field>
+     <record id="vidaley_2022_01" model="hr.rule.parameter.value">
+       <field name="parameter_value">15</field>
+       <field name="rule_parameter_id" ref="parameter_life"/>
+       <field name="date_from" eval="datetime(2022, 1, 1).date()"/>
+     </record>
+
+     <record id="parameter_VIDAGRUPO" model="hr.rule.parameter">
+       <field name="name">Seguro Vida Ley</field>
+       <field name="code">VIDALEY</field>
+       <field name="category">Seguros</field>
+       <field name="country_id" ref="base.pe"/>
+     </record>
+
+     <record id="vidaley_2022_01" model="hr.rule.parameter.value">
+       <field name="parameter_value">15</field>
+       <field name="rule_parameter_id" ref="parameter_life"/>
+       <field name="date_from" eval="datetime(2022, 1, 1).date()"/>
+     </record>
+
+     <record id="parameter_VIDALEY" model="hr.rule.parameter">
+       <field name="name">Seguro Vida Ley</field>
+       <field name="code">VIDALEY</field>
+       <field name="category">Seguros</field>
+       <field name="country_id" ref="base.pe"/>
+     </record>
+
+     <record id="vidaley_2022_01" model="hr.rule.parameter.value">
+       <field name="parameter_value">15</field>
        <field name="rule_parameter_id" ref="parameter_life"/>
        <field name="date_from" eval="datetime(2022, 1, 1).date()"/>
      </record>
