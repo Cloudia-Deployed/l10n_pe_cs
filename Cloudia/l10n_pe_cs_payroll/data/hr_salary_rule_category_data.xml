@@ -21,6 +21,13 @@
         <field name="note"></field>
     </record>
 
+    <record  id="AFP" model="hr.salary.rule.category">
+        <field name="name">Administradora de Fondo de Pensiones</field>
+        <field name="code">AFP</field>
+        <field name="parent_id" ref="hr_payroll.DED"/>
+        <field name="note"></field>
+    </record>
+
     <record  id="TAX" model="hr.salary.rule.category">
         <field name="name">Income Tax</field>
         <field name="code">TAX</field>

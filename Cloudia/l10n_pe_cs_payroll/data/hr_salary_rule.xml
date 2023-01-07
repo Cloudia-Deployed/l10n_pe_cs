@@ -214,11 +214,9 @@
       <field name="code">AFPFFONDO</field>
       <field name="sequence">22</field>
       <field name="struct_id" ref="structure_general"/>
-      <field name="category_id" ref="hr_payroll.DED"/>
+      <field name="category_id" ref="AFP"/>
       <field name="appears_on_payslip" eval="True"/>
       <field name="not_computed_in_net" eval="False"/>
-      <field name="account_credit" model="account.account"
-        eval="ref('l10n_pe.{0}_chart417'.format(obj().env.user.company_id.id))"/>
       <!-- Condition -->
       <field name="condition_select">python</field>
       <field name="condition_range">0</field>
@@ -239,11 +237,9 @@
       <field name="code">AFPCOM</field>
       <field name="sequence">23</field>
       <field name="struct_id" ref="structure_general"/>
-      <field name="category_id" ref="hr_payroll.DED"/>
+      <field name="category_id" ref="AFP"/>
       <field name="appears_on_payslip" eval="True"/>
       <field name="not_computed_in_net" eval="False"/>
-      <field name="account_credit" model="account.account"
-        eval="ref('l10n_pe.{0}_chart417'.format(obj().env.user.company_id.id))"/>
       <!-- Condition -->
       <field name="condition_select">python</field>
       <field name="condition_range">0</field>
@@ -264,11 +260,9 @@
       <field name="code">AFPSEG</field>
       <field name="sequence">24</field>
       <field name="struct_id" ref="structure_general"/>
-      <field name="category_id" ref="hr_payroll.DED"/>
+      <field name="category_id" ref="AFP"/>
       <field name="appears_on_payslip" eval="True"/>
       <field name="not_computed_in_net" eval="False"/>
-      <field name="account_credit" model="account.account"
-        eval="ref('l10n_pe.{0}_chart417'.format(obj().env.user.company_id.id))"/>
       <!-- Condition -->
       <field name="condition_select">python</field>
       <field name="condition_range">0</field>
@@ -282,6 +276,31 @@
       <field name="quantity">0</field>
       <field name="amount_percentage_base">0</field>
       <field name="amount_python_compute">result = payslip.rule_parameter('AFPSEG') * payslip.paid_amount / 100</field>
+    </record>
+
+    <record  id="salary_rule_SUB" model="hr.salary.rule">
+      <field name="name">AFP</field>
+      <field name="code">AFP</field>
+      <field name="sequence">24</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="SUB"/>
+      <field name="appears_on_payslip" eval="False"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <field name="account_credit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart417'.format(obj().env.user.company_id.id))"/>
+      <!-- Condition -->
+      <field name="condition_select">python</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python">result = categories.AFP > 0</field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = categories.AFP<</field>
     </record>
 
     <!-- Accrual -->

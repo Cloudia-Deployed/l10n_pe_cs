@@ -372,6 +372,49 @@
          <field name="date_from" eval="datetime(2020, 1, 1).date()"/>
        </record>
 
+       <!-- EPS -->
+
+       <!-- EPS_1 -->
+
+       <record id="parameter_eps1_rate" model="hr.rule.parameter">
+         <field name="name">EPS Nivel 1</field>
+         <field name="code">EPS1</field>
+         <field name="category">Seguros</field>
+         <field name="country_id" ref="base.pe"/>
+       </record>
+
+       <record id="EPS1_tasa_01_2021" model="hr.rule.parameter.value">
+         <field name="parameter_value">0</field>
+         <field name="rule_parameter_id" ref="parameter_eps1_rate"/>
+         <field name="date_from" eval="datetime(2020, 1, 1).date()"/>
+       </record>
+
+       <record id="parameter_eps2_rate" model="hr.rule.parameter">
+         <field name="name">EPS Nivel 2</field>
+         <field name="code">EPS2</field>
+         <field name="category">Seguros</field>
+         <field name="country_id" ref="base.pe"/>
+       </record>
+
+       <record id="EPS2_tasa_01_2021" model="hr.rule.parameter.value">
+         <field name="parameter_value">0</field>
+         <field name="rule_parameter_id" ref="parameter_eps2_rate"/>
+         <field name="date_from" eval="datetime(2020, 1, 1).date()"/>
+       </record>
+
+       <record id="parameter_eps3_rate" model="hr.rule.parameter">
+         <field name="name">EPS Nivel 3</field>
+         <field name="code">EPS3</field>
+         <field name="category">Seguros</field>
+         <field name="country_id" ref="base.pe"/>
+       </record>
+
+       <record id="eps3_tasa_01_2021" model="hr.rule.parameter.value">
+         <field name="parameter_value">0</field>
+         <field name="rule_parameter_id" ref="parameter_eps3_rate"/>
+         <field name="date_from" eval="datetime(2020, 1, 1).date()"/>
+       </record>
+
    </data>
 
  </odoo>
