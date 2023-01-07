@@ -40,6 +40,7 @@
 
                                 # Views
                                 'views/hr_contract_view.xml',
+                                'views/hr_employee_view.xml',
                                 #'views/hr_payslip_view.xml',
                                 'views/hr_rule_parameter_view.xml',
                                 'views/hr_plan_health_view.xml',
