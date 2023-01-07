@@ -17,7 +17,8 @@ class Contract(models.Model):
     previous_income = fields.Monetary(string="Previous income")
     commisions = fields.Boolean(string="Commissions")
     attendance_tracking = fields.Boolean(string="Attendance")
-    withholding = fields.Selection(string="Alimony Withholding", [('0', 'No'), ('1', 'Amount'), ('2', 'Percentage')])
+    withholding = fields.Selection([('0', 'No'), ('1', 'Amount'), ('2', 'Percentage')],
+        default='0', string="Withholding")
     withholding_amount = fields.Monetary(string="Withholding Amount")
     withholding_percentage = fields.Float(string="Withholding Percentage", digits=(2,1))
 
