@@ -21,6 +21,13 @@
         <field name="note"></field>
     </record>
 
+    <record  id="ESSALUD" model="hr.salary.rule.category">
+        <field name="name">Régimen de prestaciones de salud</field>
+        <field name="code">ESSALUD</field>
+        <field name="parent_id" ref="hr_payroll.DED"/>
+        <field name="note"></field>
+    </record>
+
     <record  id="AFP" model="hr.salary.rule.category">
         <field name="name">Administradora de Fondo de Pensiones</field>
         <field name="code">AFP</field>

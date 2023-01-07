@@ -284,7 +284,7 @@
       <field name="sequence">24</field>
       <field name="struct_id" ref="structure_general"/>
       <field name="category_id" ref="SUBTOTAL"/>
-      <field name="partner_id" ref="res_partner_afp_habitat"/>
+      <field name="partner_id" ref="afp_habitat"/>
       <field name="appears_on_payslip" eval="False"/>
       <field name="not_computed_in_net" eval="False"/>
       <field name="account_credit" model="account.account"
@@ -310,7 +310,7 @@
       <field name="sequence">24</field>
       <field name="struct_id" ref="structure_general"/>
       <field name="category_id" ref="SUBTOTAL"/>
-      <field name="partner_id" ref="res_partner_afp_integra"/>
+      <field name="partner_id" ref="afp_integra"/>
       <field name="appears_on_payslip" eval="False"/>
       <field name="not_computed_in_net" eval="False"/>
       <field name="account_credit" model="account.account"
@@ -336,7 +336,7 @@
       <field name="sequence">24</field>
       <field name="struct_id" ref="structure_general"/>
       <field name="category_id" ref="SUBTOTAL"/>
-      <field name="partner_id" ref="res_partner_afp_prima"/>
+      <field name="partner_id" ref="afp_prima"/>
       <field name="appears_on_payslip" eval="False"/>
       <field name="not_computed_in_net" eval="False"/>
       <field name="account_credit" model="account.account"
@@ -362,7 +362,7 @@
       <field name="sequence">24</field>
       <field name="struct_id" ref="structure_general"/>
       <field name="category_id" ref="SUBTOTAL"/>
-      <field name="partner_id" ref="res_partner_afp_profuturo"/>
+      <field name="partner_id" ref="afp_profuturo"/>
       <field name="appears_on_payslip" eval="False"/>
       <field name="not_computed_in_net" eval="False"/>
       <field name="account_credit" model="account.account"
@@ -380,6 +380,82 @@
       <field name="quantity">0</field>
       <field name="amount_percentage_base">0</field>
       <field name="amount_python_compute">result = categories.AFP</field>
+    </record>
+
+    <!-- EsSalud / EPS -->
+
+    <record  id="salary_rule_essalud_simple" model="hr.salary.rule">
+      <field name="name">EsSalud Capa Simple</field>
+      <field name="code">ESSALUD_SIMPLE</field>
+      <field name="sequence">25</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="ESSALUD"/>
+      <field name="partner_id" ref="essalud"/>
+      <field name="appears_on_payslip" eval="True"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <!-- Condition -->
+      <field name="condition_select">python</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python">result = contract.plan_health.code == 'ESSALUD'</field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = payslip.paid_amount * 0.0225</field>
+    </record>
+
+    <record  id="salary_rule_essalud_compleja" model="hr.salary.rule">
+      <field name="name">EsSalud Capa Compleja</field>
+      <field name="code">ESSALUD_COMPLEJA</field>
+      <field name="sequence">26</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="ESSALUD"/>
+      <field name="partner_id" ref="essalud"/>
+      <field name="appears_on_payslip" eval="True"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <!-- Condition -->
+      <field name="condition_select">none</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python"></field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = payslip.paid_amount * 0.0675</field>
+    </record>
+
+    <record  id="salary_rule_essalud" model="hr.salary.rule">
+      <field name="name">EsSalud Capa Compleja</field>
+      <field name="code">ESSALUD</field>
+      <field name="sequence">27</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="ESSALUD"/>
+      <field name="partner_id" ref="essalud"/>
+      <field name="appears_on_payslip" eval="False"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <field name="account_credit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart4031'.format(obj().env.user.company_id.id))"/>
+      <!-- Condition -->
+      <field name="condition_select">none</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python"></field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = categories.ESSALUD</field>
     </record>
 
     <!-- Accrual -->
