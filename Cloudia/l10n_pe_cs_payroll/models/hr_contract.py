@@ -11,9 +11,10 @@ class Contract(models.Model):
 
     plan_health = fields.Many2one('hr.plan_health', string="Health Insurance Plan")
     plan_retirement = fields.Many2one('hr.plan_retirement',string="Retirement Plan")
-    plan_health_contribution = fields.Monetary(string="Employer Additional Contribution")
-    plan_union = fields.Many2one('hr.union_plan',string="Union dues")
+    plan_health_contribution = fields.Monetary(string="Employer Contribution")
+    plan_life = fields.Many2many('hr.plan_sctr',string="Life Insurance")
     plan_sctr = fields.Many2one('hr.plan_sctr',string="SCTR")
+    plan_union = fields.Many2one('hr.union_plan',string="Union dues")
     previous_income = fields.Monetary(string="Previous income")
     commisions = fields.Boolean(string="Commissions")
     attendance_tracking = fields.Boolean(string="Attendance")

@@ -37,6 +37,6 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="hr_union_plan_menu" name="HR Union Plan" parent="hr_config_peru" action="action_hr_union_plan"/>
+    <menuitem id="hr_union_plan_menu" name="Union Fees" parent="hr_config_peru" action="action_hr_union_plan"/>
 
 </odoo>

@@ -37,6 +37,6 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="hr_plan_retirement_menu" name="HR Plan Retirement" parent="hr_config_peru" action="action_hr_plan_retirement"/>
+    <menuitem id="hr_plan_retirement_menu" name="Retirement Plan" parent="hr_config_peru" action="action_hr_plan_retirement"/>
 
 </odoo>

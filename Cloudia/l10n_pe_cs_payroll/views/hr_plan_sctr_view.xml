@@ -37,6 +37,6 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="hr_plan_sctr_menu" name="HR Plan sctr" parent="hr_config_peru" action="action_hr_plan_sctr"/>
+    <menuitem id="hr_plan_sctr_menu" name="SCTR" parent="hr_config_peru" action="action_hr_plan_sctr"/>
 
 </odoo>
