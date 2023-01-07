@@ -349,7 +349,7 @@
       <field name="struct_id" ref="structure_bonus"/>
       <field name="category_id" ref="BONUS"/>
       <field name="appears_on_payslip" eval="True"/>
-      <field name="not_computed_in_net" eval="FAlse"/>
+      <field name="not_computed_in_net" eval="False"/>
       <!-- Condition -->
       <field name="condition_select">python</field>
       <field name="condition_range">0</field>
