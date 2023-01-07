@@ -23,6 +23,7 @@
 
   'data'                 :  [
                                 # Data
+                                'data/res_partner.xml',
                                 'data/account_journal_data.xml',
                                 'data/account_account_data.xml',
                                 'data/hr_rule_parameter_data.xml',

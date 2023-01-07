@@ -278,12 +278,13 @@
       <field name="amount_python_compute">result = payslip.rule_parameter('AFPSEG') * payslip.paid_amount / 100</field>
     </record>
 
-    <record  id="salary_rule_SUB" model="hr.salary.rule">
+    <record  id="salary_rule_SUB_Habitat" model="hr.salary.rule">
       <field name="name">AFP</field>
       <field name="code">AFP</field>
       <field name="sequence">24</field>
       <field name="struct_id" ref="structure_general"/>
       <field name="category_id" ref="SUB"/>
+      <field name="partner_id" ref="res_partner_afp_habitat"/>
       <field name="appears_on_payslip" eval="False"/>
       <field name="not_computed_in_net" eval="False"/>
       <field name="account_credit" model="account.account"
@@ -293,14 +294,92 @@
       <field name="condition_range">0</field>
       <field name="condition_range_max">0</field>
       <field name="condition_range_min">0</field>
-      <field name="condition_python">result = categories.AFP > 0</field>
+      <field name="condition_python">result = contract.plan_retirement.code in ['AFPMHAB','AFPFHAB','AFPHAB']</field>
       <!-- Calculation -->
       <field name="amount_select">code</field>
       <field name="amount_fix">0</field>
       <field name="amount_percentage">0</field>
       <field name="quantity">0</field>
       <field name="amount_percentage_base">0</field>
-      <field name="amount_python_compute">result = categories.AFP<</field>
+      <field name="amount_python_compute">result = categories.AFP</field>
+    </record>
+
+    <record  id="salary_rule_SUB_Integra" model="hr.salary.rule">
+      <field name="name">AFP</field>
+      <field name="code">AFP</field>
+      <field name="sequence">24</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="SUB"/>
+      <field name="partner_id" ref="res_partner_afp_integra"/>
+      <field name="appears_on_payslip" eval="False"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <field name="account_credit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart417'.format(obj().env.user.company_id.id))"/>
+      <!-- Condition -->
+      <field name="condition_select">python</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python">result = contract.plan_retirement.code in ['AFPMINT','AFPFINT','AFPINT']</field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = categories.AFP</field>
+    </record>
+
+    <record  id="salary_rule_SUB_Prima" model="hr.salary.rule">
+      <field name="name">AFP</field>
+      <field name="code">AFP</field>
+      <field name="sequence">24</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="SUB"/>
+      <field name="partner_id" ref="res_partner_afp_prima"/>
+      <field name="appears_on_payslip" eval="False"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <field name="account_credit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart417'.format(obj().env.user.company_id.id))"/>
+      <!-- Condition -->
+      <field name="condition_select">python</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python">result = contract.plan_retirement.code in ['AFPMPRI','AFPFPRI','AFPPRI']</field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = categories.AFP</field>
+    </record>
+
+    <record  id="salary_rule_SUB_Profuturo" model="hr.salary.rule">
+      <field name="name">AFP</field>
+      <field name="code">AFP</field>
+      <field name="sequence">24</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="SUB"/>
+      <field name="partner_id" ref="res_partner_afp_profuturo"/>
+      <field name="appears_on_payslip" eval="False"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <field name="account_credit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart417'.format(obj().env.user.company_id.id))"/>
+      <!-- Condition -->
+      <field name="condition_select">python</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python">result = contract.plan_retirement.code in ['AFPMPRO','AFPFPRO','AFPPRO']</field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = categories.AFP</field>
     </record>
 
     <!-- Accrual -->
