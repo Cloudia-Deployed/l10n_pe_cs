@@ -9,4 +9,4 @@ from odoo import models,fields,api
 class Employee(models.Model):
     _inherit = 'hr.employee'
 
-    cuspp = fields.Char(string="CUSPP")
+    cuspp = fields.Char(string="CUSPP", size=12)
