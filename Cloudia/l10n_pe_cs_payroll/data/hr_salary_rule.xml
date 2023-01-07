@@ -55,7 +55,7 @@
       <field name="amount_python_compute">result = payslip.rule_parameter('RMV') * 0.1</field>
     </record>
 
-    <record  id="salary_rule_BASIC" model="hr.salary.rule">
+    <record  id="salary_rule_BASIC_SUB" model="hr.salary.rule">
       <field name="name">Basic Salary</field>
       <field name="code">BASIC</field>
       <field name="sequence">10</field>
@@ -174,7 +174,7 @@
       <field name="condition_range">0</field>
       <field name="condition_range_max">0</field>
       <field name="condition_range_min">0</field>
-      <field name="condition_python">result = contract.plan_retirement.code and contract.plan_retirement.code = 'ONP'</field>
+      <field name="condition_python">result = contract.plan_retirement.code and contract.plan_retirement.code == 'ONP'</field>
       <!-- Calculation -->
       <field name="amount_select">code</field>
       <field name="amount_fix">0</field>
