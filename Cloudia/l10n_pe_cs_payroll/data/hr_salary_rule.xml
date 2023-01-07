@@ -56,8 +56,8 @@
     </record>
 
     <record  id="salary_rule_BASIC_SUB" model="hr.salary.rule">
-      <field name="name">Basic Salary</field>
-      <field name="code">BASIC</field>
+      <field name="name">BASE SALARY SUBTOTAL</field>
+      <field name="code">BASE</field>
       <field name="sequence">10</field>
       <field name="struct_id" ref="structure_general"/>
       <field name="category_id" ref="SUBTOTAL"/>
@@ -78,29 +78,6 @@
       <field name="quantity">0</field>
       <field name="amount_percentage_base">0</field>
       <field name="amount_python_compute">result = categories.BASIC</field>
-    </record>
-
-    <record  id="salary_rule_GROSS" model="hr.salary.rule">
-      <field name="name">Gross Salary</field>
-      <field name="code">GROSS</field>
-      <field name="sequence">20</field>
-      <field name="struct_id" ref="structure_general"/>
-      <field name="category_id" ref="SUBTOTAL"/>
-      <field name="appears_on_payslip" eval="True"/>
-      <field name="not_computed_in_net" eval="False"/>
-      <!-- Condition -->
-      <field name="condition_select">none</field>
-      <field name="condition_range">0</field>
-      <field name="condition_range_max">0</field>
-      <field name="condition_range_min">0</field>
-      <field name="condition_python"></field>
-      <!-- Calculation -->
-      <field name="amount_select">code</field>
-      <field name="amount_fix">0</field>
-      <field name="amount_percentage">0</field>
-      <field name="quantity">0</field>
-      <field name="amount_percentage_base">0</field>
-      <field name="amount_python_compute">result = categories.GROSS</field>
     </record>
 
     <!-- Allowance -->
@@ -153,6 +130,29 @@
       <field name="quantity">0</field>
       <field name="amount_percentage_base">0</field>
       <field name="amount_python_compute">result = contract.alw_voucher</field>
+    </record>
+
+    <record  id="salary_rule_GROSS" model="hr.salary.rule">
+      <field name="name">GROSS SALARY SUBTOTAL</field>
+      <field name="code">GROSS</field>
+      <field name="sequence">20</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="SUBTOTAL"/>
+      <field name="appears_on_payslip" eval="True"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <!-- Condition -->
+      <field name="condition_select">none</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python"></field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = categories.GROSS</field>
     </record>
 
     <!-- Deductions -->
@@ -212,7 +212,7 @@
     <record  id="salary_rule_AFPCOM" model="hr.salary.rule">
       <field name="name">AFP Comisión</field>
       <field name="code">AFPCOM</field>
-      <field name="sequence">10</field>
+      <field name="sequence">23</field>
       <field name="struct_id" ref="structure_general"/>
       <field name="category_id" ref="hr_payroll.DED"/>
       <field name="appears_on_payslip" eval="True"/>
@@ -237,7 +237,7 @@
     <record  id="salary_rule_AFPSEG" model="hr.salary.rule">
       <field name="name">AFP Seguro</field>
       <field name="code">AFPSEG</field>
-      <field name="sequence">10</field>
+      <field name="sequence">24</field>
       <field name="struct_id" ref="structure_general"/>
       <field name="category_id" ref="hr_payroll.DED"/>
       <field name="appears_on_payslip" eval="True"/>
@@ -265,7 +265,7 @@
 
     <record  id="salary_rule_CTSACC" model="hr.salary.rule">
       <field name="name">CTS Accrual</field>
-      <field name="code">CTSACC</field>
+      <field name="code">CTS</field>
       <field name="sequence">51</field>
       <field name="struct_id" ref="structure_general"/>
       <field name="category_id" ref="CTS"/>
@@ -291,13 +291,15 @@
     </record>
 
     <record  id="salary_rule_CTS" model="hr.salary.rule">
-      <field name="name">CTS Payment</field>
+      <field name="name">Compensación por Tiempo de Servicios</field>
       <field name="code">CTS</field>
       <field name="sequence">7</field>
       <field name="struct_id" ref="structure_cts"/>
       <field name="category_id" ref="CTS"/>
       <field name="appears_on_payslip" eval="True"/>
       <field name="not_computed_in_net" eval="False"/>
+      <field name="account_debit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart4151'.format(obj().env.user.company_id.id))"/>
       <!-- Condition -->
       <field name="condition_select">python</field>
       <field name="condition_range">0</field>
@@ -316,8 +318,8 @@
     <!-- Bonus pay -->
 
     <record  id="salary_rule_BONUSACC" model="hr.salary.rule">
-      <field name="name">Bonus</field>
-      <field name="code">BONUSACC</field>
+      <field name="name">Regular Bonus Accrual</field>
+      <field name="code">BONUS</field>
       <field name="sequence">52</field>
       <field name="struct_id" ref="structure_general"/>
       <field name="category_id" ref="BONUS"/>
@@ -343,13 +345,15 @@
     </record>
 
     <record  id="salary_rule_BONUS" model="hr.salary.rule">
-      <field name="name">Bonus Payment</field>
+      <field name="name">Gratificación</field>
       <field name="code">BONUS</field>
       <field name="sequence">10</field>
       <field name="struct_id" ref="structure_bonus"/>
       <field name="category_id" ref="BONUS"/>
       <field name="appears_on_payslip" eval="True"/>
       <field name="not_computed_in_net" eval="False"/>
+      <field name="account_debit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart4111'.format(obj().env.user.company_id.id))"/>
       <!-- Condition -->
       <field name="condition_select">python</field>
       <field name="condition_range">0</field>
