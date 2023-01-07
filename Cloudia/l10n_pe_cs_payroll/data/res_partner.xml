@@ -19,7 +19,6 @@
       <field name="website">http://www.afphabitat.com.pe</field>
       <field name="vat">20551464971</field>
       <field name="image_1920" type="base64" file="l10n_pe_cs_payroll/static/src/img/icon.png"/>
-      <field name="lang">es_PE</field>
     </record>
 
     <record id="res_partner_afp_integra" model="res.partner">
@@ -34,7 +33,6 @@
       <field name="website">http://www.integra.com.pe</field>
       <field name="vat">20157036794</field>
       <field name="image_1920" type="base64" file="l10n_pe_cs_payroll/static/src/img/icon.png"/>
-      <field name="lang">es_PE</field>
     </record>
 
     <record id="res_partner_afp_prima" model="res.partner">
@@ -49,7 +47,6 @@
       <field name="website">http://www.prima.com.pe</field>
       <field name="vat">20510398158</field>
       <field name="image_1920" type="base64" file="l10n_pe_cs_payroll/static/src/img/icon.png"/>
-      <field name="lang">es_PE</field>
     </record>
 
     <record id="res_partner_afp_profuturo" model="res.partner">
@@ -64,7 +61,6 @@
       <field name="website">http://www.profuturo.com.pe</field>
       <field name="vat">20142829551</field>
       <field name="image_1920" type="base64" file="l10n_pe_cs_payroll/static/src/img/icon.png"/>
-      <field name="lang">es_PE</field>
     </record>
 
   </data>
