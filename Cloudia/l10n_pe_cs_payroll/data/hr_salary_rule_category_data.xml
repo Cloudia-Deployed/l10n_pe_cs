@@ -15,12 +15,10 @@
         <field name="parent_id" ref="hr_payroll.GROSS"/>
     </record>
 
-    <record  id="hr_payroll.GROSS" model="hr.salary.rule.category">
-        <field name="parent_id" ref="hr_payroll.NET"/>
-    </record>
-
-    <record  id="hr_payroll.DED" model="hr.salary.rule.category">
-        <field name="parent_id" ref="hr_payroll.NET"/>
+    <record  id="SUBTOTAL" model="hr.salary.rule.category">
+        <field name="name">Subtotal</field>
+        <field name="code">SUBTOTAL</field>
+        <field name="note"></field>
     </record>
 
     <record  id="TAX" model="hr.salary.rule.category">

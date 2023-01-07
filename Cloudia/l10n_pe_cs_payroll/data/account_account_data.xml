@@ -14,6 +14,7 @@
       <field name="reconcile" eval="True"/>
       <field name="currency_id" ref="base.PEN"/>
       <field name="user_type_id" ref="account.data_account_type_payable"/>
+      <field name="chart_template_id" ref="l10n_pe.pe_chart_template"/>
     </record>
 
     <record  id="chart4172" model="account.account.template">
@@ -23,6 +24,7 @@
       <field name="reconcile" eval="True"/>
       <field name="currency_id" ref="base.PEN"/>
       <field name="user_type_id" ref="account.data_account_type_payable"/>
+      <field name="chart_template_id" ref="l10n_pe.pe_chart_template"/>
     </record>
 
     <record  id="chart4173" model="account.account.template">
@@ -32,6 +34,7 @@
       <field name="reconcile" eval="True"/>
       <field name="currency_id" ref="base.PEN"/>
       <field name="user_type_id" ref="account.data_account_type_payable"/>
+      <field name="chart_template_id" ref="l10n_pe.pe_chart_template"/>
     </record>
 
     <record  id="chart4174" model="account.account.template">
@@ -41,6 +44,7 @@
       <field name="reconcile" eval="True"/>
       <field name="currency_id" ref="base.PEN"/>
       <field name="user_type_id" ref="account.data_account_type_payable"/>
+      <field name="chart_template_id" ref="l10n_pe.pe_chart_template"/>
     </record>
 
   </data>

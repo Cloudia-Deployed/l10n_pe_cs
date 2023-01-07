@@ -12,7 +12,7 @@
     <record  id="salary_rule_BASIC" model="hr.salary.rule">
       <field name="name">Basic salary</field>
       <field name="code">BASIC</field>
-      <field name="sequence">10</field>
+      <field name="sequence">1</field>
       <field name="struct_id" ref="structure_general"/>
       <field name="category_id" ref="hr_payroll.BASIC"/>
       <field name="appears_on_payslip" eval="True"/>
@@ -35,9 +35,9 @@
     <record  id="salary_rule_FAMILY" model="hr.salary.rule">
       <field name="name">Family additional</field>
       <field name="code">FAMILY</field>
-      <field name="sequence">20</field>
+      <field name="sequence">5</field>
       <field name="struct_id" ref="structure_general"/>
-      <field name="category_id" ref="hr_payroll.ALW"/>
+      <field name="category_id" ref="hr_payroll.BASIC"/>
       <field name="appears_on_payslip" eval="True"/>
       <field name="not_computed_in_net" eval="False"/>
       <!-- Condition -->
@@ -54,6 +54,212 @@
       <field name="amount_percentage_base">0</field>
       <field name="amount_python_compute">result = payslip.rule_parameter('RMV') * 0.1</field>
     </record>
+
+    <record  id="salary_rule_BASIC" model="hr.salary.rule">
+      <field name="name">Basic Salary</field>
+      <field name="code">BASIC</field>
+      <field name="sequence">10</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="SUBTOTAL"/>
+      <field name="appears_on_payslip" eval="False"/>
+      <field name="not_computed_in_net" eval="True"/>
+      <field name="account_debit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart6211'.format(obj().env.user.company_id.id))"/>
+      <!-- Condition -->
+      <field name="condition_select">none</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python"></field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = categories.BASIC</field>
+    </record>
+
+    <record  id="salary_rule_GROSS" model="hr.salary.rule">
+      <field name="name">Gross Salary</field>
+      <field name="code">GROSS</field>
+      <field name="sequence">20</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="SUBTOTAL"/>
+      <field name="appears_on_payslip" eval="True"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <!-- Condition -->
+      <field name="condition_select">none</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python"></field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = categories.GROSS</field>
+    </record>
+
+    <!-- Allowance -->
+
+    <record  id="salary_rule_TRANSP" model="hr.salary.rule">
+      <field name="name">Transportation Allowance</field>
+      <field name="code">TRANSP</field>
+      <field name="sequence">11</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="hr_payroll.ALW"/>
+      <field name="appears_on_payslip" eval="True"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <field name="account_debit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart6213'.format(obj().env.user.company_id.id))"/>
+      <!-- Condition -->
+      <field name="condition_select">none</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python"></field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = contract.alw_transport</field>
+    </record>
+
+    <record  id="salary_rule_TRANSP" model="hr.salary.rule">
+      <field name="name">Voucher Allowance</field>
+      <field name="code">VOUCHER</field>
+      <field name="sequence">12</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="hr_payroll.ALW"/>
+      <field name="appears_on_payslip" eval="True"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <field name="account_debit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart6213'.format(obj().env.user.company_id.id))"/>
+      <!-- Condition -->
+      <field name="condition_select">none</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python"></field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = contract.alw_voucher</field>
+    </record>
+
+    <!-- Deductions -->
+
+    <!-- AFP / ONP -->
+
+    <record  id="salary_rule_ONP" model="hr.salary.rule">
+      <field name="name">Aporte ONP</field>
+      <field name="code">ONP</field>
+      <field name="sequence">21</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="hr_payroll.DED"/>
+      <field name="appears_on_payslip" eval="True"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <field name="account_credit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart4153'.format(obj().env.user.company_id.id))"/>
+      <!-- Condition -->
+      <field name="condition_select">python</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python">result = contract.plan_retirement.code and contract.plan_retirement.code = 'ONP'</field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = payslip.rule_parameter(contract.plan_retirement.code) * payslip.paid_amount / 100</field>
+    </record>
+
+    <record  id="salary_rule_AFPFFONDO" model="hr.salary.rule">
+      <field name="name">AFP Aporte al fondo</field>
+      <field name="code">AFPFFONDO</field>
+      <field name="sequence">22</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="hr_payroll.DED"/>
+      <field name="appears_on_payslip" eval="True"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <field name="account_credit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart417'.format(obj().env.user.company_id.id))"/>
+      <!-- Condition -->
+      <field name="condition_select">python</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python">result = contract.plan_retirement.code and contract.plan_retirement.code != 'ONP'</field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = payslip.paid_amount * 0.1</field>
+    </record>
+
+    <record  id="salary_rule_AFPCOM" model="hr.salary.rule">
+      <field name="name">AFP Comisión</field>
+      <field name="code">AFPCOM</field>
+      <field name="sequence">10</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="hr_payroll.DED"/>
+      <field name="appears_on_payslip" eval="True"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <field name="account_credit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart417'.format(obj().env.user.company_id.id))"/>
+      <!-- Condition -->
+      <field name="condition_select">python</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python">result = contract.plan_retirement.code and contract.plan_retirement.code != 'ONP'</field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = payslip.rule_parameter(contract.plan_retirement.code) * payslip.paid_amount / 100</field>
+    </record>
+
+    <record  id="salary_rule_AFPSEG" model="hr.salary.rule">
+      <field name="name">AFP Seguro</field>
+      <field name="code">AFPSEG</field>
+      <field name="sequence">10</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="hr_payroll.DED"/>
+      <field name="appears_on_payslip" eval="True"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <field name="account_credit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart417'.format(obj().env.user.company_id.id))"/>
+      <!-- Condition -->
+      <field name="condition_select">python</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python">result = contract.plan_retirement.code and contract.plan_retirement.code != 'ONP'</field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = payslip.rule_parameter('AFPSEG') * payslip.paid_amount / 100</field>
+    </record>
+
+    <!-- Accrual -->
 
     <!-- CTS -->
 
@@ -157,81 +363,6 @@
       <field name="quantity">0</field>
       <field name="amount_percentage_base">0</field>
       <field name="amount_python_compute">result = - payslip.sum('CTSACC',contract.date_start) + payslip.paid_amount * 7 / ( 6 * 12 )</field>
-    </record>
-
-    <!-- AFP / ONP -->
-
-    <record  id="salary_rule_AFPFONP" model="hr.salary.rule">
-      <field name="name">AFP Aporte al fondo</field>
-      <field name="code">AFPFONP</field>
-      <field name="sequence">10</field>
-      <field name="struct_id" ref="structure_general"/>
-      <field name="category_id" ref="hr_payroll.DED"/>
-      <field name="appears_on_payslip" eval="True"/>
-      <field name="not_computed_in_net" eval="False"/>
-      <field name="account_debit" model="account.account"
-        eval="ref('l10n_pe.{0}_chart6291'.format(obj().env.user.company_id.id))"/>
-      <field name="account_credit" model="account.account"
-        eval="ref('l10n_pe.{0}_chart4151'.format(obj().env.user.company_id.id))"/>
-      <!-- Condition -->
-      <field name="condition_select">python</field>
-      <field name="condition_range">0</field>
-      <field name="condition_range_max">0</field>
-      <field name="condition_range_min">0</field>
-      <field name="condition_python">result = contract.plan_retirement.code and contract.plan_retirement.code != 'ONP'</field>
-      <!-- Calculation -->
-      <field name="amount_select">code</field>
-      <field name="amount_fix">0</field>
-      <field name="amount_percentage">0</field>
-      <field name="quantity">0</field>
-      <field name="amount_percentage_base">0</field>
-      <field name="amount_python_compute">result = payslip.paid_amount * 0.1</field>
-    </record>
-
-    <record  id="salary_rule_AFPCOM" model="hr.salary.rule">
-      <field name="name">AFP Comisión</field>
-      <field name="code">AFPCOM</field>
-      <field name="sequence">10</field>
-      <field name="struct_id" ref="structure_general"/>
-      <field name="category_id" ref="hr_payroll.DED"/>
-      <field name="appears_on_payslip" eval="True"/>
-      <field name="not_computed_in_net" eval="False"/>
-      <!-- Condition -->
-      <field name="condition_select">python</field>
-      <field name="condition_range">0</field>
-      <field name="condition_range_max">0</field>
-      <field name="condition_range_min">0</field>
-      <field name="condition_python">result = contract.plan_retirement.code and contract.plan_retirement.code != 'ONP'</field>
-      <!-- Calculation -->
-      <field name="amount_select">code</field>
-      <field name="amount_fix">0</field>
-      <field name="amount_percentage">0</field>
-      <field name="quantity">0</field>
-      <field name="amount_percentage_base">0</field>
-      <field name="amount_python_compute">result = payslip.rule_parameter(contract.plan_retirement.code) * payslip.paid_amount / 100</field>
-    </record>
-
-    <record  id="salary_rule_AFPSEG" model="hr.salary.rule">
-      <field name="name">AFP Seguro</field>
-      <field name="code">AFPSEG</field>
-      <field name="sequence">10</field>
-      <field name="struct_id" ref="structure_general"/>
-      <field name="category_id" ref="hr_payroll.DED"/>
-      <field name="appears_on_payslip" eval="True"/>
-      <field name="not_computed_in_net" eval="False"/>
-      <!-- Condition -->
-      <field name="condition_select">python</field>
-      <field name="condition_range">0</field>
-      <field name="condition_range_max">0</field>
-      <field name="condition_range_min">0</field>
-      <field name="condition_python">result = contract.plan_retirement.code and contract.plan_retirement.code != 'ONP'</field>
-      <!-- Calculation -->
-      <field name="amount_select">code</field>
-      <field name="amount_fix">0</field>
-      <field name="amount_percentage">0</field>
-      <field name="quantity">0</field>
-      <field name="amount_percentage_base">0</field>
-      <field name="amount_python_compute">result = payslip.rule_parameter('AFPSEG') * payslip.paid_amount / 100</field>
     </record>
 
   </data>
