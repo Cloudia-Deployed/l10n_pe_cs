@@ -33,4 +33,6 @@
         </field>
     </record>
 
+    <menuitem id="hr_config_peru" name="Configurations for Peru" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration"/>
+
 </odoo>
