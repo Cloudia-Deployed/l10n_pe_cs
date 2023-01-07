@@ -32,6 +32,31 @@
       <field name="amount_python_compute">result = payslip.paid_amount</field>
     </record>
 
+    <record  id="salary_rule_PTO" model="hr.salary.rule">
+      <field name="name">Holiday salary</field>
+      <field name="code">PTO</field>
+      <field name="sequence">2</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="hr_payroll.BASIC"/>
+      <field name="appears_on_payslip" eval="True"/>
+      <field name="not_computed_in_net" eval="False"/>
+      <field name="account_debit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart4115'.format(obj().env.user.company_id.id))"/>
+      <!-- Condition -->
+      <field name="condition_select">python</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python">result = worked_days.LEAVE100</field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = contract.wage * worked_days.LEAVE100.number_of_days / (worked_days.LEAVE100.number_of_days + worked_days.WORK100.number_of_days)</field>
+    </record>
+
     <record  id="salary_rule_FAMILY" model="hr.salary.rule">
       <field name="name">Family additional</field>
       <field name="code">FAMILY</field>
@@ -312,7 +337,7 @@
       <field name="amount_percentage">0</field>
       <field name="quantity">0</field>
       <field name="amount_percentage_base">0</field>
-      <field name="amount_python_compute">result = - payslip.sum('CTSACC', contract.date_start, (payslip.date_to + relativedelta(month=-1)) + payslip.sum('CTS', contract.date_start)</field>
+      <field name="amount_python_compute">result = - payslip.sum('CTSACC',contract.date_start,(payslip.date_from + relativedelta(day=-1))) + payslip.sum('CTS',contract.date_start,payslip.date_from)</field>
     </record>
 
     <!-- Bonus pay -->
@@ -367,6 +392,35 @@
       <field name="quantity">0</field>
       <field name="amount_percentage_base">0</field>
       <field name="amount_python_compute">result = - payslip.sum('CTSACC',contract.date_start) + payslip.paid_amount * 7 / ( 6 * 12 )</field>
+    </record>
+
+    <!-- VAcations -->
+
+    <record  id="salary_rule_PTOACC" model="hr.salary.rule">
+      <field name="name">Vacation Accrual</field>
+      <field name="code">PTOACC</field>
+      <field name="sequence">53</field>
+      <field name="struct_id" ref="structure_general"/>
+      <field name="category_id" ref="PTO"/>
+      <field name="appears_on_payslip" eval="False"/>
+      <field name="not_computed_in_net" eval="True"/>
+      <field name="account_debit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart6215'.format(obj().env.user.company_id.id))"/>
+      <field name="account_credit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart4115'.format(obj().env.user.company_id.id))"/>
+      <!-- Condition -->
+      <field name="condition_select">none</field>
+      <field name="condition_range">0</field>
+      <field name="condition_range_max">0</field>
+      <field name="condition_range_min">0</field>
+      <field name="condition_python"></field>
+      <!-- Calculation -->
+      <field name="amount_select">code</field>
+      <field name="amount_fix">0</field>
+      <field name="amount_percentage">0</field>
+      <field name="quantity">0</field>
+      <field name="amount_percentage_base">0</field>
+      <field name="amount_python_compute">result = - payslip.paid_amount * 7 / ( 6 * 12 )</field>
     </record>
 
   </data>
