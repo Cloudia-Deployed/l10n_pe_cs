@@ -8,63 +8,65 @@
   <data noupdate="1">
 
     <record id="res_partner_afp_habitat" model="res.partner">
-     <field name="name">AFP HABITAT S.A.</field>
-     <field name="type">contact</field>
-     <field name="is_company" eval="True"/>
-     <field name="company_type">company</field>
-     <field name="street">Av. Jorge Basadre Nro. 592 (Piso 6 Of. 608 - 609)</field>
-     <field name="city">Lima</field>
-     <field name="country_id" ref="base.pe"/>
-     <field name="l10n_pe_district" ref="l10n_pe.district_pe_150131"/>
-     <field name="website">http://www.afphabitat.com.pe</field>
-     <field name="vat">20551464971</field>
-     <field name="image_1920" type="base64" file="l10n_pe_cs_payroll/static/src/img/icon.png"/>
-     <field name="lang">es_PE</field>
+      <field name="name">AFP HABITAT S.A.</field>
+      <field name="type">contact</field>
+      <field name="is_company" eval="True"/>
+      <field name="company_type">company</field>
+      <field name="street">Av. Jorge Basadre Nro. 592 (Piso 6 Of. 608 - 609)</field>
+      <field name="city">Lima</field>
+      <field name="country_id" ref="base.pe"/>
+      <field name="l10n_pe_district" ref="l10n_pe.district_pe_150131"/>
+      <field name="website">http://www.afphabitat.com.pe</field>
+      <field name="vat">20551464971</field>
+      <field name="image_1920" type="base64" file="l10n_pe_cs_payroll/static/src/img/icon.png"/>
+      <field name="lang">es_PE</field>
+    </record>
+
+    <record id="res_partner_afp_integra" model="res.partner">
+      <field name="name">AFP INTEGRA S.A.</field>
+      <field name="type">contact</field>
+      <field name="is_company" eval="True"/>
+      <field name="company_type">company</field>
+      <field name="street">Av. Canaval y Moreyra Nro. 522 Int. P6y5</field>
+      <field name="city">Lima</field>
+      <field name="country_id" ref="base.pe"/>
+      <field name="l10n_pe_district" ref="l10n_pe.district_pe_150131"/>
+      <field name="website">http://www.integra.com.pe</field>
+      <field name="vat">20157036794</field>
+      <field name="image_1920" type="base64" file="l10n_pe_cs_payroll/static/src/img/icon.png"/>
+      <field name="lang">es_PE</field>
+    </record>
+
+    <record id="res_partner_afp_prima" model="res.partner">
+      <field name="name">PRIMA AFP S.A.</field>
+      <field name="type">contact</field>
+      <field name="is_company" eval="True"/>
+      <field name="company_type">company</field>
+      <field name="street">Cal. Chinchon Nro. 980</field>
+      <field name="city">Lima</field>
+      <field name="country_id" ref="base.pe"/>
+      <field name="l10n_pe_district" ref="l10n_pe.district_pe_150131"/>
+      <field name="website">http://www.prima.com.pe</field>
+      <field name="vat">20510398158</field>
+      <field name="image_1920" type="base64" file="l10n_pe_cs_payroll/static/src/img/icon.png"/>
+      <field name="lang">es_PE</field>
+    </record>
+
+    <record id="res_partner_afp_profuturo" model="res.partner">
+      <field name="name">PROFUTURO AFP</field>
+      <field name="type">contact</field>
+      <field name="is_company" eval="True"/>
+      <field name="company_type">company</field>
+      <field name="street">Cal. Coronel Andres Reyes Nro. 489</field>
+      <field name="city">Lima</field>
+      <field name="country_id" ref="base.pe"/>
+      <field name="l10n_pe_district" ref="l10n_pe.district_pe_150131"/>
+      <field name="website">http://www.profuturo.com.pe</field>
+      <field name="vat">20142829551</field>
+      <field name="image_1920" type="base64" file="l10n_pe_cs_payroll/static/src/img/icon.png"/>
+      <field name="lang">es_PE</field>
+    </record>
+
   </data>
-
-  <record id="res_partner_afp_integra" model="res.partner">
-   <field name="name">AFP INTEGRA S.A.</field>
-   <field name="type">contact</field>
-   <field name="is_company" eval="True"/>
-   <field name="company_type">company</field>
-   <field name="street">Av. Canaval y Moreyra Nro. 522 Int. P6y5</field>
-   <field name="city">Lima</field>
-   <field name="country_id" ref="base.pe"/>
-   <field name="l10n_pe_district" ref="l10n_pe.district_pe_150131"/>
-   <field name="website">http://www.integra.com.pe</field>
-   <field name="vat">20157036794</field>
-   <field name="image_1920" type="base64" file="l10n_pe_cs_payroll/static/src/img/icon.png"/>
-   <field name="lang">es_PE</field>
-</data>
-
-<record id="res_partner_afp_prima" model="res.partner">
- <field name="name">PRIMA AFP S.A.</field>
- <field name="type">contact</field>
- <field name="is_company" eval="True"/>
- <field name="company_type">company</field>
- <field name="street">Cal. Chinchon Nro. 980</field>
- <field name="city">Lima</field>
- <field name="country_id" ref="base.pe"/>
- <field name="l10n_pe_district" ref="l10n_pe.district_pe_150131"/>
- <field name="website">http://www.prima.com.pe</field>
- <field name="vat">20510398158</field>
- <field name="image_1920" type="base64" file="l10n_pe_cs_payroll/static/src/img/icon.png"/>
- <field name="lang">es_PE</field>
-</data>
-
-<record id="res_partner_afp_profuturo" model="res.partner">
- <field name="name">PROFUTURO AFP</field>
- <field name="type">contact</field>
- <field name="is_company" eval="True"/>
- <field name="company_type">company</field>
- <field name="street">Cal. Coronel Andres Reyes Nro. 489</field>
- <field name="city">Lima</field>
- <field name="country_id" ref="base.pe"/>
- <field name="l10n_pe_district" ref="l10n_pe.district_pe_150131"/>
- <field name="website">http://www.profuturo.com.pe</field>
- <field name="vat">20142829551</field>
- <field name="image_1920" type="base64" file="l10n_pe_cs_payroll/static/src/img/icon.png"/>
- <field name="lang">es_PE</field>
-</data>
 
 </odoo>
