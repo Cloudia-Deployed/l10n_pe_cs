@@ -265,7 +265,7 @@
 
     <record  id="salary_rule_CTSACC" model="hr.salary.rule">
       <field name="name">CTS Accrual</field>
-      <field name="code">CTS</field>
+      <field name="code">CTSACC</field>
       <field name="sequence">51</field>
       <field name="struct_id" ref="structure_general"/>
       <field name="category_id" ref="CTS"/>
@@ -312,14 +312,14 @@
       <field name="amount_percentage">0</field>
       <field name="quantity">0</field>
       <field name="amount_percentage_base">0</field>
-      <field name="amount_python_compute">result = - payslip.sum('CTSACC',contract.date_start) + payslip.paid_amount * 7 / ( 6 * 12 )</field>
+      <field name="amount_python_compute">result = - payslip.sum('CTSACC', contract.date_start, (payslip.date_to + relativedelta(month=-1)) + payslip.sum('CTS', contract.date_start)</field>
     </record>
 
     <!-- Bonus pay -->
 
     <record  id="salary_rule_BONUSACC" model="hr.salary.rule">
       <field name="name">Regular Bonus Accrual</field>
-      <field name="code">BONUS</field>
+      <field name="code">BONUSACC</field>
       <field name="sequence">52</field>
       <field name="struct_id" ref="structure_general"/>
       <field name="category_id" ref="BONUS"/>
