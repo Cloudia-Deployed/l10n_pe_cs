@@ -283,7 +283,7 @@
       <field name="code">AFP</field>
       <field name="sequence">24</field>
       <field name="struct_id" ref="structure_general"/>
-      <field name="category_id" ref="SUB"/>
+      <field name="category_id" ref="SUBTOTAL"/>
       <field name="partner_id" ref="res_partner_afp_habitat"/>
       <field name="appears_on_payslip" eval="False"/>
       <field name="not_computed_in_net" eval="False"/>
@@ -309,7 +309,7 @@
       <field name="code">AFP</field>
       <field name="sequence">24</field>
       <field name="struct_id" ref="structure_general"/>
-      <field name="category_id" ref="SUB"/>
+      <field name="category_id" ref="SUBTOTAL"/>
       <field name="partner_id" ref="res_partner_afp_integra"/>
       <field name="appears_on_payslip" eval="False"/>
       <field name="not_computed_in_net" eval="False"/>
@@ -335,7 +335,7 @@
       <field name="code">AFP</field>
       <field name="sequence">24</field>
       <field name="struct_id" ref="structure_general"/>
-      <field name="category_id" ref="SUB"/>
+      <field name="category_id" ref="SUBTOTAL"/>
       <field name="partner_id" ref="res_partner_afp_prima"/>
       <field name="appears_on_payslip" eval="False"/>
       <field name="not_computed_in_net" eval="False"/>
@@ -361,7 +361,7 @@
       <field name="code">AFP</field>
       <field name="sequence">24</field>
       <field name="struct_id" ref="structure_general"/>
-      <field name="category_id" ref="SUB"/>
+      <field name="category_id" ref="SUBTOTAL"/>
       <field name="partner_id" ref="res_partner_afp_profuturo"/>
       <field name="appears_on_payslip" eval="False"/>
       <field name="not_computed_in_net" eval="False"/>
