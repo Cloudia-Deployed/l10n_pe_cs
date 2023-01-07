@@ -130,7 +130,7 @@
       <field name="amount_python_compute">result = contract.alw_transport</field>
     </record>
 
-    <record  id="salary_rule_TRANSP" model="hr.salary.rule">
+    <record  id="salary_rule_VOUCHER" model="hr.salary.rule">
       <field name="name">Voucher Allowance</field>
       <field name="code">VOUCHER</field>
       <field name="sequence">12</field>
@@ -266,7 +266,7 @@
     <record  id="salary_rule_CTSACC" model="hr.salary.rule">
       <field name="name">CTS Accrual</field>
       <field name="code">CTSACC</field>
-      <field name="sequence">10</field>
+      <field name="sequence">51</field>
       <field name="struct_id" ref="structure_general"/>
       <field name="category_id" ref="CTS"/>
       <field name="appears_on_payslip" eval="False"/>
@@ -293,11 +293,11 @@
     <record  id="salary_rule_CTS" model="hr.salary.rule">
       <field name="name">CTS Payment</field>
       <field name="code">CTS</field>
-      <field name="sequence">10</field>
+      <field name="sequence">7</field>
       <field name="struct_id" ref="structure_cts"/>
       <field name="category_id" ref="CTS"/>
       <field name="appears_on_payslip" eval="True"/>
-      <field name="not_computed_in_net" eval="True"/>
+      <field name="not_computed_in_net" eval="False"/>
       <!-- Condition -->
       <field name="condition_select">python</field>
       <field name="condition_range">0</field>
@@ -315,10 +315,10 @@
 
     <!-- Bonus pay -->
 
-    <record  id="salary_rule_BONUS" model="hr.salary.rule">
+    <record  id="salary_rule_BONUSACC" model="hr.salary.rule">
       <field name="name">Bonus</field>
-      <field name="code">BONUS</field>
-      <field name="sequence">10</field>
+      <field name="code">BONUSACC</field>
+      <field name="sequence">52</field>
       <field name="struct_id" ref="structure_general"/>
       <field name="category_id" ref="BONUS"/>
       <field name="appears_on_payslip" eval="False"/>
@@ -342,14 +342,14 @@
       <field name="amount_python_compute">result = - payslip.paid_amount * 7 / ( 6 * 12 )</field>
     </record>
 
-    <record  id="salary_rule_CTS" model="hr.salary.rule">
-      <field name="name">CTS Payment</field>
-      <field name="code">CTS</field>
+    <record  id="salary_rule_BONUS" model="hr.salary.rule">
+      <field name="name">Bonus Payment</field>
+      <field name="code">BONUS</field>
       <field name="sequence">10</field>
-      <field name="struct_id" ref="structure_cts"/>
-      <field name="category_id" ref="CTS"/>
+      <field name="struct_id" ref="structure_bonus"/>
+      <field name="category_id" ref="BOUNS"/>
       <field name="appears_on_payslip" eval="True"/>
-      <field name="not_computed_in_net" eval="True"/>
+      <field name="not_computed_in_net" eval="FAlse"/>
       <!-- Condition -->
       <field name="condition_select">python</field>
       <field name="condition_range">0</field>

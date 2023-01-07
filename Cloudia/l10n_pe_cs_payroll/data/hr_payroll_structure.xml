@@ -17,7 +17,7 @@
       <field name="rule_ids" eval="False"/>
     </record>
 
-    <record  id="structure_quincena" model="hr.payroll.structure">
+    <record  id="structure_advance" model="hr.payroll.structure">
       <field name="name">Quarterly advance payment</field>
       <field name="type_id" ref="structure_type_general"/>
       <field name="use_worked_day_lines" eval="True"/>
