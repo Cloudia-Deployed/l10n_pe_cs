@@ -5,7 +5,7 @@
 
 <odoo>
 
-  <data>
+  <data noupdate="1">
 
     <record  id="chart4171" model="account.account.template">
       <field name="name">AFP Integra</field>
