@@ -22,6 +22,9 @@
                         <group>
                             <field name="commisions"/>
                             <field name="attendance_tracking"/>
+                            <field name="withholding"/>
+                            <field name="withholding_amount" attrs="{'invisible': [(''withholding','!=','1')]}"/>
+                            <field name="withholding_percentage" attrs="{'invisible': [(''withholding','!=','2')]}"/>
                             <field name="previous_income"/>
                         </group>
                     </group>

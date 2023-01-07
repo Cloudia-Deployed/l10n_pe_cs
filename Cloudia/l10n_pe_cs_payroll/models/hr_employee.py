@@ -3,12 +3,10 @@
 # Copyright (c) 2021-TODAY Cloudia Systems S.A.C.
 # See LICENSE and COPYRIGHT files for full copyright and licensing details.
 
-from odoo import models,fields
+from odoo import models,fields,api
 
 
-class HrPlanRetirement(models.Model):
-    _name = 'hr.plan_retirement'
-    _description = 'HR Plan Retirement'
+class Employee(models.Model):
+    _inherit = 'hr.employee'
 
-    code = fields.Char(string='Code')
-    name = fields.Char(string='Name')
+    cuspp = fields.Char(string="CUSPP")

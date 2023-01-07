@@ -3,3 +3,4 @@ access_hr_plan_health,hr.plan_health,model_hr_plan_health,,1,1,1,1
 access_hr_plan_life,hr.plan_life,model_hr_plan_life,,1,1,1,1
 access_hr_plan_retirement,hr.plan_retirement,model_hr_plan_retirement,,1,1,1,1
 access_hr_union_plan,hr.union_plan,model_hr_union_plan,,1,1,1,1
+access_hr_plan_sctr,hr.plan_sctr,model_hr_plan_sctr,,1,1,1,1

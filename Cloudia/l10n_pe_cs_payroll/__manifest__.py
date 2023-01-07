@@ -34,6 +34,7 @@
                                 'data/hr_salary_rule.xml',
                                 'data/hr_plan_retirement.xml',
                                 'data/hr_plan_health.xml',
+                                'data/hr_plan_life.xml',
                                 'data/hr_plan_sctr.xml',
                                 'data/ir_filters_data.xml',
 

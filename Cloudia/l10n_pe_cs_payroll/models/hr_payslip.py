@@ -6,6 +6,7 @@
 from odoo import models
 from dateutil.relativedelta import relativedelta
 
+
 class HrPayslip(models.Model):
     _inherit = 'hr.payslip'
 

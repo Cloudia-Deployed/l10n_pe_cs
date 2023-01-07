@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part of Odoo - Module Developed by Cloudia Systems S.A.C. | http://cloudia.systems | <info@cloudia.systems> -->
+<!-- Copyright (c) 2021-Present Cloudia Systems S.A.C. -->
+<!-- See LICENSE and COPYRIGHT files for full copyright and licensing details -->
+
+<odoo>
+    <record id="hr_employee_view_form_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr_employee.hr_employee_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='registration_number']" position="after">
+                <field name="cuspp"/>
+            </xpath>
+        </field>
+    </record>
+
+    <menuitem id="hr_config_peru" name="Configurations for Peru" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration"/>
+
+</odoo>
