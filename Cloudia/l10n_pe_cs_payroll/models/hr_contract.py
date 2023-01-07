@@ -16,8 +16,8 @@ class Contract(models.Model):
     plan_sctr = fields.Many2one('hr.plan_sctr',string="SCTR")
     plan_union = fields.Many2one('hr.union_plan',string="Union dues")
     previous_income = fields.Monetary(string="Previous income")
-    commisions = fields.Boolean(string="Commissions")
-    attendance_tracking = fields.Boolean(string="Attendance")
+    alw_transport = fields.Monetary(string="Transport Allowance")
+    alw_voucher = fields.Monetary(string="Voucher")
     withholding = fields.Selection([('0', 'No'), ('1', 'Amount'), ('2', 'Percentage')],
         default='0', string="Withholding")
     withholding_amount = fields.Monetary(string="Withholding Amount")

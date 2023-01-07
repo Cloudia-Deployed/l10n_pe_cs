@@ -21,8 +21,8 @@
                             <field name="plan_union" options="{'no_create_edit': True}"/>
                         </group>
                         <group>
-                            <field name="commisions"/>
-                            <field name="attendance_tracking"/>
+                            <field name="alw_transport"/>
+                            <field name="alw_voucher"/>
                             <field name="withholding"/>
                             <field name="withholding_amount" attrs="{'invisible': [('withholding','!=','1')]}"/>
                             <field name="withholding_percentage" widget="percentage" attrs="{'invisible': [('withholding','!=','2')]}"/>
@@ -34,6 +34,6 @@
         </field>
     </record>
 
-    <menuitem id="hr_config_peru" name="Configurations for Peru" parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration"/>
+    <menuitem id="hr_config_peru" name="Configurations for Peru" sequence=100 parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration"/>
 
 </odoo>
