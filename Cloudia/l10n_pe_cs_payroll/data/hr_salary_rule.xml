@@ -40,8 +40,6 @@
       <field name="category_id" ref="hr_payroll.BASIC"/>
       <field name="appears_on_payslip" eval="True"/>
       <field name="not_computed_in_net" eval="False"/>
-      <field name="account_debit" model="account.account"
-        eval="ref('l10n_pe.{0}_chart4115'.format(obj().env.user.company_id.id))"/>
       <!-- Condition -->
       <field name="condition_select">python</field>
       <field name="condition_range">0</field>
@@ -159,7 +157,7 @@
 
     <record  id="salary_rule_GROSS" model="hr.salary.rule">
       <field name="name">GROSS SALARY SUBTOTAL</field>
-      <field name="code">GROSS</field>
+      <field name="code">GROSSSUB</field>
       <field name="sequence">20</field>
       <field name="struct_id" ref="structure_general"/>
       <field name="category_id" ref="SUBTOTAL"/>
@@ -433,7 +431,7 @@
     </record>
 
     <record  id="salary_rule_essalud" model="hr.salary.rule">
-      <field name="name">EsSalud Capa Compleja</field>
+      <field name="name">ESSALUD</field>
       <field name="code">ESSALUD</field>
       <field name="sequence">27</field>
       <field name="struct_id" ref="structure_general"/>
@@ -471,9 +469,9 @@
       <field name="appears_on_payslip" eval="False"/>
       <field name="not_computed_in_net" eval="True"/>
       <field name="account_debit" model="account.account"
-        eval="ref('l10n_pe.{0}_chart6291'.format(obj().env.user.company_id.id))"/>
-      <field name="account_credit" model="account.account"
         eval="ref('l10n_pe.{0}_chart4151'.format(obj().env.user.company_id.id))"/>
+      <field name="account_credit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart6291'.format(obj().env.user.company_id.id))"/>
       <!-- Condition -->
       <field name="condition_select">none</field>
       <field name="condition_range">0</field>
@@ -525,9 +523,9 @@
       <field name="appears_on_payslip" eval="False"/>
       <field name="not_computed_in_net" eval="True"/>
       <field name="account_debit" model="account.account"
-        eval="ref('l10n_pe.{0}_chart6211'.format(obj().env.user.company_id.id))"/>
-      <field name="account_credit" model="account.account"
         eval="ref('l10n_pe.{0}_chart4111'.format(obj().env.user.company_id.id))"/>
+      <field name="account_credit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart6211'.format(obj().env.user.company_id.id))"/>
       <!-- Condition -->
       <field name="condition_select">none</field>
       <field name="condition_range">0</field>
@@ -568,7 +566,7 @@
       <field name="amount_python_compute">result = - payslip.sum('CTSACC',contract.date_start) + payslip.paid_amount * 7 / ( 6 * 12 )</field>
     </record>
 
-    <!-- VAcations -->
+    <!-- Vacations -->
 
     <record  id="salary_rule_PTOACC" model="hr.salary.rule">
       <field name="name">Vacation Accrual</field>
@@ -579,9 +577,9 @@
       <field name="appears_on_payslip" eval="False"/>
       <field name="not_computed_in_net" eval="True"/>
       <field name="account_debit" model="account.account"
-        eval="ref('l10n_pe.{0}_chart6215'.format(obj().env.user.company_id.id))"/>
-      <field name="account_credit" model="account.account"
         eval="ref('l10n_pe.{0}_chart4115'.format(obj().env.user.company_id.id))"/>
+      <field name="account_credit" model="account.account"
+        eval="ref('l10n_pe.{0}_chart6215'.format(obj().env.user.company_id.id))"/>
       <!-- Condition -->
       <field name="condition_select">none</field>
       <field name="condition_range">0</field>
